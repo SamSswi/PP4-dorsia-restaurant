@@ -23,7 +23,7 @@ DRINK_TYPE = (
 
 class Booking(models.Model):
     customer_id = models.ForeignKey(
-        User, on_delete=models.Cascade, related_name='restaurant_booking')
+        User, on_delete=models.CASCADE, related_name='restaurant_booking')
     number_of_guests = models.IntegerField(default=1)
     date = models.DateField()
     time = models.TimeField()
