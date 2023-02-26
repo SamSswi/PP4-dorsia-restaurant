@@ -34,9 +34,9 @@ class Booking(models.Model):
 
 class Meal(models.Model):
     meal_name = models.CharField(max_length=100)
-    meal_description = models.CharField()
+    meal_description = models.CharField(max_length=1000)
     meal_type = models.IntegerField(choices=MEAL_TYPE)
-    allergens = models.CharField()
+    allergens = models.CharField(max_length=250)
 
     class Meta:
         ordering = ['meal_type', 'meal_name']
@@ -47,9 +47,9 @@ class Meal(models.Model):
 
 class Drink(models.Model):
     drink_name = models.CharField(max_length=80)
-    drink_description = models.CharField()
+    drink_description = models.CharField(max_length=1000)
     drink_type = models.IntegerField(choices=DRINK_TYPE)
-    allergens = models.CharField()
+    allergens = models.CharField(max_length=250)
 
     class Meta:
         ordering = ['drink_type', 'drink_name']
