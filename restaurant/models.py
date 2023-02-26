@@ -45,7 +45,7 @@ class Meal(models.Model):
         return self.meal_name
 
 
-class Drink(model.Models):
+class Drink(models.Models):
     drink_name = models.CharField(max_length=80)
     drink_description = models.CharField()
     drink_type = models.IntegerField(choices=DRINK_TYPE)
