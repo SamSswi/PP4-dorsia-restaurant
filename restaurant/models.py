@@ -49,7 +49,7 @@ class Drink(models.Model):
     drink_name = models.CharField(max_length=80)
     drink_description = models.CharField()
     drink_type = models.IntegerField(choices=DRINK_TYPE)
-    allergens = model.CharField()
+    allergens = models.CharField()
 
     class Meta:
         ordering = ['drink_type', 'drink_name']
