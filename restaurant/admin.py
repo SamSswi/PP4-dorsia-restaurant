@@ -11,9 +11,9 @@ class BookingAdmin(SummernoteModelAdmin):
 
 @admin.register(Meal)
 class MealAdmin(SummernoteModelAdmin):
-    list_filter = ('meal_type')
+    list_filter = ['meal_type']
 
 
 @admin.register(Drink)
 class MealAdmin(SummernoteModelAdmin):
-    list_filter = ('drink_type')
+    list_filter = ['drink_type']
