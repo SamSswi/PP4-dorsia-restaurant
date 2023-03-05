@@ -9,5 +9,11 @@ class BookingAdmin(SummernoteModelAdmin):
     list_filter = ('status', 'date', 'time')
 
 
-admin.site.register(Meal)
-admin.site.register(Drink)
+@admin.register(Meal)
+class MealAdmin(SummernoteModelAdmin):
+    list_filter = ('meal_name', 'meal_type')
+
+
+@admin.register(Drink)
+class MealAdmin(SummernoteModelAdmin):
+    list_filter = ('drink_name', 'drink_type')
