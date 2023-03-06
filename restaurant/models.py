@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-STATUS = ((0, "Pending"), (1, "Confirmed"))
 MEAL_TYPE = (
     (0, "Appetizer"),
     (1, "Salad"),
@@ -27,7 +26,8 @@ class Booking(models.Model):
     number_of_guests = models.IntegerField(default=1)
     date = models.DateField()
     time = models.TimeField()
-    status = models.IntegerField(choices=STATUS, default=0)
+    # https://github.com/Code-Institute-Solutions/Django3blog/blob/master/05_building_the_admin_site/blog/models.py
+    confirmed = model.BooleanField(default=False)
 
 # add __str__ to bookings
 
