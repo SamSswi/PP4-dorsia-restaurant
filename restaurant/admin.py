@@ -14,10 +14,11 @@ class BookingAdmin(SummernoteModelAdmin):
 class MealAdmin(SummernoteModelAdmin):
     list_filter = ['meal_type']
     list_display = ('meal_name', 'meal_type')
+    search_fields = ['meal_name', 'meal_description']
 
 
 @admin.register(Drink)
 class MealAdmin(SummernoteModelAdmin):
     list_filter = ['drink_type']
     list_display = ('drink_name', 'drink_type')
-
+    search_fields = ['drink_name', 'drink_description']
