@@ -27,7 +27,7 @@ class Booking(models.Model):
     date = models.DateField()
     time = models.TimeField()
     # https://github.com/Code-Institute-Solutions/Django3blog/blob/master/05_building_the_admin_site/blog/models.py
-    confirmed = model.BooleanField(default=False)
+    confirmed = models.BooleanField(default=False)
 
 # add __str__ to bookings
 
