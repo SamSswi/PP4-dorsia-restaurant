@@ -6,3 +6,15 @@ from django.shortcuts import render, HttpResponse
 
 def home_page(request):
     return render(request, 'index.html')
+
+
+def menu(request):
+    return render(request, 'menu.html')
+
+
+def reservation(request):
+    return render(request, 'reservation.html')
+
+
+def contact(request):
+    return render(request, 'contact.html')
