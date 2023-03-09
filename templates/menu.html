@@ -2,7 +2,6 @@
 {% block content %}
 <h2>Menu</h2>
 
-
 <h3>Appetizers</h3>
 {% for meal in meals %}
 {% if meal.meal_type == 0 %}
@@ -16,7 +15,7 @@
 {% endfor %}
 <h3>Salads</h3>
 {% for meal in meals %}
-{% if meal.meal_type == 0 %}
+{% if meal.meal_type == 1 %}
     <tr>
         <td>{{ meal.meal_name }}</td>
         <br>
@@ -27,7 +26,7 @@
 {% endfor %}
 <h3>Main Courses</h3>
 {% for meal in meals %}
-{% if meal.meal_type == 0 %}
+{% if meal.meal_type == 2 %}
     <tr>
         <td>{{ meal.meal_name }}</td>
         <br>
@@ -38,7 +37,7 @@
 {% endfor %}
 <h3>Side Dishes</h3>
 {% for meal in meals %}
-{% if meal.meal_type == 0 %}
+{% if meal.meal_type == 3 %}
     <tr>
         <td>{{ meal.meal_name }}</td>
         <br>
@@ -49,7 +48,7 @@
 {% endfor %}
 <h3>Desserts</h3>
 {% for meal in meals %}
-{% if meal.meal_type == 0 %}
+{% if meal.meal_type == 4 %}
     <tr>
         <td>{{ meal.meal_name }}</td>
         <br>
