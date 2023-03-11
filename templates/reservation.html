@@ -1,4 +1,37 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Make a reservation</h1>
+<form action="">
+    <div>
+        <p>
+            <label for="full-name">Full Name</label>
+            <input type="text" name="full-name" id="full-name">
+        </p>
+    </div>
+    <div>
+        <p>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </p>
+    </div>
+    <div>
+        <p>
+            <label for="phone_number">Phone number</label>
+            <input type="text" name="phone_number" id="phone_number">
+        </p>
+    </div>
+    <div>
+        <p>
+            <label for="comment">Notes</label>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+        </p>
+        <div>
+            <p>
+                <label for="booking-time"></label>
+                <input type="datetime-local" id="booking-time" name="booking-time" value="today" min="today"
+                    max="2025-06-15T00:00">
+            </p>
+        </div>
+        <button type="button" class="btn btn-success">Submit</button>
+</form>
 {% endblock content %}
