@@ -26,6 +26,7 @@ class Booking(models.Model):
     number_of_guests = models.IntegerField(default=1)
     date = models.DateField()
     time = models.TimeField()
+    comment = models.TextField(default='')
     # https://github.com/Code-Institute-Solutions/Django3blog/blob/master/05_building_the_admin_site/blog/models.py
     confirmed = models.BooleanField(default=False)
 
