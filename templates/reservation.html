@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Make a reservation</h1>
-<form action="">
+<form action="POST" action="reservation">
+    {% csrf_token %}
     <div>
         <p>
             <label for="full-name">Full Name</label>
@@ -18,6 +19,12 @@
         <p>
             <label for="phone_number">Phone number</label>
             <input type="text" name="phone_number" id="phone_number">
+        </p>
+    </div>
+    <div>
+        <p>
+            <label for="number_of_guests">Number of guests</label>
+            <input type="text" name="number_of_guests" id="number_of_guests">
         </p>
     </div>
     <div>
