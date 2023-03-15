@@ -22,6 +22,14 @@ def menu(request):
 #     model = Booking
 #     template_name = 'reservation.html'
 def reservation(request):
+    if request.method == 'POST':
+        booking_full_name = request.POST.get('full-name')
+        booking_email = request.POST.get('email')
+        booking_phone_number = request.POST.get('phone_number')
+        number_of_guests = request.POST.get('number_of_guests')
+        date = request.POST.get('date')
+        time = request.POST.get('time')
+        comment = request.POST.get('comment')
     return render(request, 'reservation.html')
 
 
