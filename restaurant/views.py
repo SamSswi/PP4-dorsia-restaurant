@@ -4,6 +4,7 @@ from django.shortcuts import render, HttpResponse
 # https://github.com/Code-Institute-Solutions/Django3blog/tree/master/05_building_the_admin_site
 from django.views import generic, View
 from .models import Meal, Drink, Booking
+from datetime import date, timedelta
 
 
 def home_page(request):
@@ -27,10 +28,22 @@ def reservation(request):
         booking_email = request.POST.get('email')
         booking_phone_number = request.POST.get('phone_number')
         number_of_guests = request.POST.get('number_of_guests')
-        date = request.POST.get('date')
+        booking_date = request.POST.get('date')
         time = request.POST.get('time')
         comment = request.POST.get('comment')
-    return render(request, 'reservation.html')
+    # variables
+    max_guest_num = tuple(range(1, 21))
+    hour_tuple = (
+        '7:00 pm', '8:00 pm', '9:00 pm', '10:00 pm',
+        '11:00 pm', '12:00 am', '1:00 am', '2:00 am',
+        '3:00 am', '4:00 am')
+    # https://stackoverflow.com/questions/1506901/cleanest-and-most-pythonic-way-to-get-tomorrows-date
+    min_date = date.today() + timedelta(days=1)
+    context = {
+        'max_guest_num': max_guest_num,
+        'hour_tuple': hour_tuple,
+        'min_date': min_date}
+    return render(request, 'reservation.html', context)
 
 
 def contact(request):
