@@ -27,7 +27,7 @@ class Booking(models.Model):
     booking_email = models.EmailField(null=True)
     booking_phone_number = models.CharField(max_length=20, null=True)
     number_of_guests = models.IntegerField(default=1)
-    date = models.DateField()
+    booking_date = models.DateField()
     time = models.TimeField()
     comment = models.TextField(default='')
     # https://github.com/Code-Institute-Solutions/Django3blog/blob/master/05_building_the_admin_site/blog/models.py
