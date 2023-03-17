@@ -66,3 +66,7 @@ def reservation(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+
+def manage_reservations(request):
+    return render(request, 'manage_reservations.html')

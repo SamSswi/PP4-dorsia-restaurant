@@ -24,5 +24,9 @@ urlpatterns = [
     path('menu/', menu, name='menu'),
     path('reservation/', reservation, name='reservation'),
     path('contact/', contact, name='contact'),
+    path(
+        'manage_reservations/',
+        manage_reservations,
+        name='manage_reservations'),
     path('accounts/', include('allauth.urls')),
 ]
