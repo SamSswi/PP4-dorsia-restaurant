@@ -33,7 +33,8 @@ class Booking(models.Model):
     # https://github.com/Code-Institute-Solutions/Django3blog/blob/master/05_building_the_admin_site/blog/models.py
     confirmed = models.BooleanField(default=False)
 
-# add __str__ to bookings
+    def __str__(self):
+        return f"{self.booking_full_name} - {self.booking_date}, {self.time}; {self.number_of_guests}guests"
 
 
 class Meal(models.Model):
