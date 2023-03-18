@@ -69,4 +69,8 @@ def contact(request):
 
 
 def manage_reservations(request):
-    return render(request, 'manage_reservations.html')
+    username = request.user
+    bookings = Booking.objects.filter(
+        customer_id=username).order_by('-booking_date')
+    context = {'bookings': bookings, 'username': username}
+    return render(request, 'manage_reservations.html', context)
