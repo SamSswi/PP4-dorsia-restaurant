@@ -2,6 +2,7 @@
 {% block content %}
 <!-- https://getbootstrap.com/docs/5.3/components/accordion/#how-it-works -->
 <h2> You are now managing the bookings made by the user: {{ username }} </h2>
+
 <div class="accordion accordion-flush" id="accordionFlushExample">
     {% for booking in bookings %}
     <div class="accordion-item">
@@ -46,6 +47,8 @@
                     </tbody>
                 </table>
             </div>
+            <button type="button" class="btn btn-warning">Edit</button>
+            <button type="button" class="btn btn-danger">Delete</button>
         </div>
     </div>
     {% endfor %}
