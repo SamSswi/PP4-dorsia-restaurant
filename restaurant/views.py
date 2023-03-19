@@ -74,3 +74,9 @@ def manage_reservations(request):
         customer_id=username).order_by('-booking_date')
     context = {'bookings': bookings, 'username': username}
     return render(request, 'manage_reservations.html', context)
+
+
+def edit_reservations(request, booking_id):
+    booking_to_edit = Booking.objects.get(id=booking_id)
+    context = {'booking_to_edit': booking_to_edit}
+    return (request, context)
