@@ -21,20 +21,24 @@
             <input type="text" name="phone_number" id="phone_number" value="{{booking_to_edit.booking_phone_number}}">
         </p>
     </div>
+    <script>
+        console.log({{booking_to_edit.comment}})
+    </script>
     <div>
         <p>
             <label for="number_of_guests">Number of guests</label>
             <select name="number_of_guests" id="number_of_guests" value="{{booking_to_edit.number_of_guests}}">
                 {% for number in max_guest_num %}
-                <option value="{{number}}">{{number}}</option>
+                <option value="{{number}}" {% if number == booking_to_edit.number_of_guests %} selected {% endif %}>{{number}}</option>
                 {% endfor %}
             </select>
         </p>
     </div>
     <div>
+        
         <p>
             <label for="comment">Notes</label>
-            <textarea name="comment" id="comment" cols="30" rows="10" value="{{booking_to_edit.comment}}"></textarea>
+            <textarea name="comment" id="comment" cols="30" rows="10">{{booking_to_edit.comment}}</textarea>
         </p>
         <div>
             <p>

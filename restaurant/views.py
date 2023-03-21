@@ -80,13 +80,38 @@ def edit_reservation(request, booking_id):
     booking_to_edit = Booking.objects.get(id=booking_id)
     # https://stackoverflow.com/questions/14619494/how-to-understand-strptime-vs-strftime#:~:text=strptime%20is%20short%20for%20%22parse,seen%20strptime%20used%20since%20DateTime.
     booking_date_str = booking_to_edit.booking_date.strftime('%Y-%m-%d')
-    time_str_am = booking_to_edit.time.strftime('%-I:%M %p').replace('am', ' am').lower()
+    time_str_am = booking_to_edit.time.strftime('%-I:%M %p').replace(
+        'am', ' am').lower()
     time_str = time_str_am.replace('pm', 'pm').lower()
+    if request.method == 'POST':
+        booking_full_name = request.POST.get('full-name')
+        booking_email = request.POST.get('email')
+        booking_phone_number = request.POST.get('phone_number')
+        number_of_guests = int(request.POST.get('number_of_guests'))
+        booking_date_string = request.POST.get('booking-date')
+        time_string = request.POST.get('booking-time')
+        comment = request.POST.get('comment')
+        booking_date = datetime.strptime(
+            booking_date_string, '%Y-%m-%d').date()
+        time = datetime.strptime(time_string, '%I:%M %p').time()
+        # Update the blog post object with the new values
+        booking_to_edit.booking_full_name = booking_full_name
+        booking_to_edit.booking_email = booking_email
+        booking_to_edit.booking_phone_number = booking_phone_number
+        booking_to_edit.number_of_guests = number_of_guests
+        booking_to_edit.booking_date = booking_date
+        booking_to_edit.time = time
+        booking_to_edit.comment = comment
+        booking_to_edit.save()
+        return redirect('manage_reservations')
+    # variables
     hour_tuple = (
         '7:00 pm', '8:00 pm', '9:00 pm', '10:00 pm',
         '11:00 pm', '12:00 am', '1:00 am', '2:00 am',
         '3:00 am', '4:00 am')
+    max_guest_num = tuple(range(1, 21))
     context = {
+        'max_guest_num': max_guest_num,
         'booking_to_edit': booking_to_edit,
         'booking_date_str': booking_date_str,
         'time_str': time_str,
