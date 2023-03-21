@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Make a reservation</h1>
+<form method="POST">
+    {% csrf_token %}
+    <div>
+        <p>
+            <label for="full-name">Full Name</label>
+            <input type="text" name="full-name" id="full-name" required value="{{booking_to_edit.booking_full_name}}">
+        </p>
+    </div>
+    <div>
+        <p>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required value="{{booking_to_edit.booking_email}}">
+        </p>
+    </div>
+    <div>
+        <p>
+            <label for="phone_number">Phone number</label>
+            <input type="text" name="phone_number" id="phone_number" value="{{booking_to_edit.booking_phone_number}}">
+        </p>
+    </div>
+    <div>
+        <p>
+            <label for="number_of_guests">Number of guests</label>
+            <select name="number_of_guests" id="number_of_guests" value="{{booking_to_edit.number_of_guests}}">
+                {% for number in max_guest_num %}
+                <option value="{{number}}">{{number}}</option>
+                {% endfor %}
+            </select>
+        </p>
+    </div>
+    <div>
+        <p>
+            <label for="comment">Notes</label>
+            <textarea name="comment" id="comment" cols="30" rows="10" value="{{booking_to_edit.comment}}"></textarea>
+        </p>
+        <div>
+            <p>
+                <label for="booking-date"></label>
+                <input type="date" name="booking-date" id="booking-date" min="{{ min_date }}" required
+                    pattern="\d{4}-\d{2}-\d{2}" value="{{ booking_date_str }}">
+            </p>
+        </div>
+        <div>
+            <p>
+                <label for="booking-time">Time:</label>
+                <select name="booking-time" id="booking-time">
+                    {% for hour in hour_tuple %}
+                    <option value="{{hour}}" {% if hour == time_str %} selected {% endif %}>{{hour}}</option>
+                    {% endfor %}
+                </select>
+            </p>
+        </div>
+        <button type="submit" class="btn btn-success" id="submit-btn">Submit</button>
+</form>
+
+<!-- Modal -->
+<!-- https://getbootstrap.com/docs/4.0/components/modal/ -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Our Appologies</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                We apologize for the inconvenience, but the earliest date when a reservation can be made is
+                {{ min_date }} (tomorrow)
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                    data-target="exampleModalCenter">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/static/js/reservation.js"></script>
+
+{% endblock content %}

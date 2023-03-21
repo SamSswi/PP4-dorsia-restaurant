@@ -47,7 +47,9 @@
                     </tbody>
                 </table>
             </div>
-            <button type="button" class="btn btn-warning">Edit</button>
+            <a href="{% url 'edit_reservation' booking_id=booking.id %}">
+                <button type="button" class="btn btn-warning">Edit</button>
+            </a>
             <button type="button" class="btn btn-danger">Delete</button>
         </div>
     </div>

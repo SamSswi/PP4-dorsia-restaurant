@@ -76,7 +76,19 @@ def manage_reservations(request):
     return render(request, 'manage_reservations.html', context)
 
 
-def edit_reservations(request, booking_id):
+def edit_reservation(request, booking_id):
     booking_to_edit = Booking.objects.get(id=booking_id)
-    context = {'booking_to_edit': booking_to_edit}
-    return (request, context)
+    # https://stackoverflow.com/questions/14619494/how-to-understand-strptime-vs-strftime#:~:text=strptime%20is%20short%20for%20%22parse,seen%20strptime%20used%20since%20DateTime.
+    booking_date_str = booking_to_edit.booking_date.strftime('%Y-%m-%d')
+    time_str_am = booking_to_edit.time.strftime('%-I:%M %p').replace('am', ' am').lower()
+    time_str = time_str_am.replace('pm', 'pm').lower()
+    hour_tuple = (
+        '7:00 pm', '8:00 pm', '9:00 pm', '10:00 pm',
+        '11:00 pm', '12:00 am', '1:00 am', '2:00 am',
+        '3:00 am', '4:00 am')
+    context = {
+        'booking_to_edit': booking_to_edit,
+        'booking_date_str': booking_date_str,
+        'time_str': time_str,
+        'hour_tuple': hour_tuple}
+    return render(request, 'edit_reservation.html', context)
