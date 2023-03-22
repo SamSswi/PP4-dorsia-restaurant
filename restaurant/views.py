@@ -121,5 +121,8 @@ def edit_reservation(request, booking_id):
 
 def delete_reservation(request, booking_id):
     booking = Booking.objects.get(id=booking_id)
-    booking.delete()
-    return redirect('manage_reservations')
+    if request.method == "POST":
+        booking.delete()
+        return redirect('manage_reservations')
+    context = {'booking': booking}
+    return render(request, 'delete_reservation.html', context)

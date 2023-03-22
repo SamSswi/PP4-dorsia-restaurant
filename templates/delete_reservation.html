@@ -1,5 +1,44 @@
 {% extends 'base.html' %}
 {% block content %}
-<h3> You have clicked the delete button on this reservation. Please read carefully the details of your reservation before taking a decisive action on it. </h3>
-
+<h3> You have clicked the delete button on this reservation. Please read carefully the details of your reservation
+    before taking a decisive action on it. </h3>
+<!-- https://getbootstrap.com/docs/4.0/content/tables/ -->
+<table class="table table-striped">
+    <tbody>
+        <tr>
+            <th scope="row">Booking Name: </th>
+            <td>{{ booking.booking_full_name }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Booking email: </th>
+            <td>{{ booking.booking_email }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Booking phone number: </th>
+            <td>{{ booking.booking_phone_number }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Number of guests: </th>
+            <td>{{ booking.number_of_guests }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Booking date and time: </th>
+            <td>{{ booking.booking_date }} {{ booking.time }} </td>
+        </tr>
+        <tr>
+            <th scope="row">Comments: </th>
+            <td>{{ booking.comment }}</td>
+        </tr>
+    </tbody>
+</table>
+<a href="{% url 'edit_reservation' booking_id=booking.id %}">
+    <button type="button" class="btn btn-secondary">I don't want to delete the booking. Take me back</button>
+</a>
+<a href="{% url 'edit_reservation' booking_id=booking.id %}">
+    <button type="button" class="btn btn-warning">I would like to edit the booking instead</button>
+</a>
+<form method="Post">
+    {% csrf_token %}
+    <input type="submit" class="btn btn-danger" value="I would like to delete the booking">
+</form>
 {% endblock %}
