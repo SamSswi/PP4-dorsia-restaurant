@@ -117,3 +117,9 @@ def edit_reservation(request, booking_id):
         'time_str': time_str,
         'hour_tuple': hour_tuple}
     return render(request, 'edit_reservation.html', context)
+
+
+def delete_reservation(request, booking_id):
+    booking = Booking.objects.get(id=booking_id)
+    booking.delete()
+    return redirect('manage_reservations')
