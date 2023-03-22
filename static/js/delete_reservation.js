@@ -6,5 +6,4 @@ document.addEventListener("DOMContentLoaded", function () {
             myModal.hide()
         })
     }
-    document.getElementById("delete-btn").addEventListener("click", myModal.show())
 })
