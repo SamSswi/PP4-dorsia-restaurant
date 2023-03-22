@@ -50,11 +50,39 @@
             <a href="{% url 'edit_reservation' booking_id=booking.id %}">
                 <button type="button" class="btn btn-warning">Edit</button>
             </a>
-            <a href="{% url 'delete_reservation' booking_id=booking.id %}">
-                <button type="button" class="btn btn-danger">Delete</button>
+
+            <button type="button" class="btn btn-danger">Delete</button>
             </a>
         </div>
     </div>
     {% endfor %}
+</div>
+
+<!-- Modal -->
+<!-- https://getbootstrap.com/docs/4.0/components/modal/ -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">You are about to DELETE one of your reservations!
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete the reservation?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" data-target="exampleModalCenter">I
+                    don't want to delete my reservation</button>
+                <a href="{% url 'delete_reservation' booking_id=booking.id %}">
+                    <button type="button" class="btn btn-danger" data-target="exampleModalCenter">Delete
+                        reservation</button>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock content %}
