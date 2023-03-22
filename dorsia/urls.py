@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from restaurant import views
+from restaurant.views import home_page, menu, contact, reservation, manage_reservations, edit_reservation, delete_reservation
 from django.urls import path, include
 
 urlpatterns = [
