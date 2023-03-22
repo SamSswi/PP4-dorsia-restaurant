@@ -50,9 +50,7 @@
             <a href="{% url 'edit_reservation' booking_id=booking.id %}">
                 <button type="button" class="btn btn-warning">Edit</button>
             </a>
-
-            <button type="button" class="btn btn-danger">Delete</button>
-            </a>
+            <button type="button" class="btn btn-danger" id="delete-btn">Delete</button>
         </div>
     </div>
     {% endfor %}
