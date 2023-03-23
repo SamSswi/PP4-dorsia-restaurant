@@ -67,6 +67,35 @@ nav span {
     animation: fade-in 2s ease-in forwards;
 }
 
+#btn-container {
+    background-color: #6E7178;
+    padding: 1rem;
+    justify-content: center;
+}
+
+#btn-container div {
+    display: flex;
+    justify-content: center;
+}
+
+#btn-container button {
+    padding: 5px;
+    /* border-bottom: 1px solid #E3DAC9; */
+    color: #E3DAC9;
+}
+
+#btn-container button:hover {
+        border: 1px solid #E3DAC9;
+}
+
+#menu-btn {
+    margin-right: 20px;
+}
+
+#make-a-reservation-btn {
+    margin-left: 20px;
+}
+
 @keyframes fade-in {
     from {
         opacity: 0;
