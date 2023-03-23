@@ -59,3 +59,11 @@ footer table {
 footer table th {
     border: none;
 }
+
+footer a {
+    color: #E3DAC9;
+}
+
+#address-table td {
+    border: none;
+}
