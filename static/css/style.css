@@ -43,3 +43,19 @@ nav span {
     content: "\f0c9";
     color: #E3DAC9;
   }
+
+/* Footer */
+footer {
+    background-color: #6E7178;
+    color: #E3DAC9;
+    padding: 20px;
+}
+
+footer table {
+    color: #E3DAC9 !important;
+    border-color: #E3DAC9 !important;
+}
+
+footer table th {
+    border: none;
+}
