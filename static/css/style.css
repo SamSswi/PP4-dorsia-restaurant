@@ -67,3 +67,7 @@ footer a {
 #address-table td {
     border: none;
 }
+
+#copyright {
+    margin-top: 1rem;
+}
