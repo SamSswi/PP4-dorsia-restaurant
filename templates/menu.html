@@ -1,386 +1,269 @@
 {% extends 'base.html' %}
 {% block content %}
-<h2 id="menu-title">Menu</h2>
-<div class="row">
-    <div class="col-md-6 col-lg-4 col-xl-3 col-sm-8 col-xs-12">
-        <h3>Appetizers</h3>
-        {% for meal in meals %}
-        {% if meal.meal_type == 0 %}
-        <div class="accordion-item">
-            <h3 class="accordion-header" id="flush-heading-{{ meal.id }}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse-{{ meal.id }}" aria-expanded="false"
-                    aria-controls="flush-collapse-{{ meal.id }}">{{ meal.meal_name }}
-                </button>
-            </h3>
-            <div id="flush-collapse-{{ meal.id }}" class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-{{ meal.id }}" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">{{ meal.meal_description }}
+<h2 id="menu-title">Our Menu</h2>
+<div class="row menu-row">
+    <div class="col-md-8 col-lg-6 col-sm-10 col-xs-12">
+        <div class="row">
+            <div class="col-md-6 col-xl-4 col-sm-12 menu-category">
+                <h3>Appetizers</h3>
+                {% for meal in meals %}
+                {% if meal.meal_type == 0 %}
+                <div class="accordion-item">
+                    <h4 class="accordion-header" id="flush-heading-{{ meal.id }}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse-{{ meal.id }}" aria-expanded="false"
+                            aria-controls="flush-collapse-{{ meal.id }}">{{ meal.meal_name }}
+                        </button>
+                        </h3>
+                        <div id="flush-collapse-{{ meal.id }}" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading-{{ meal.id }}" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">{{ meal.meal_description }}
+                            </div>
+                        </div>
                 </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="col-md-6 col-xl-4 col-sm-12 menu-category">
+                <h3>Salads</h3>
+                {% for meal in meals %}
+                {% if meal.meal_type == 1 %}
+                <div class="accordion-item">
+                    <h4 class="accordion-header" id="flush-heading-{{ meal.id }}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse-{{ meal.id }}" aria-expanded="false"
+                            aria-controls="flush-collapse-{{ meal.id }}">{{ meal.meal_name }}
+                        </button>
+                        </h3>
+                        <div id="flush-collapse-{{ meal.id }}" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading-{{ meal.id }}" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">{{ meal.meal_description }}
+                            </div>
+                        </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="col-md-6 col-xl-4 col-sm-12 menu-category">
+                <h3>Main Courses</h3>
+                {% for meal in meals %}
+                {% if meal.meal_type == 2 %}
+                <div class="accordion-item">
+                    <h4 class="accordion-header" id="flush-heading-{{ meal.id }}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse-{{ meal.id }}" aria-expanded="false"
+                            aria-controls="flush-collapse-{{ meal.id }}">{{ meal.meal_name }}
+                        </button>
+                        </h3>
+                        <div id="flush-collapse-{{ meal.id }}" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading-{{ meal.id }}" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">{{ meal.meal_description }}
+                            </div>
+                        </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="col-md-6 col-xl-4 col-sm-12 menu-category">
+                <h3>Side Dishes</h3>
+                {% for meal in meals %}
+                {% if meal.meal_type == 3 %}
+                <div class="accordion-item">
+                    <h4 class="accordion-header" id="flush-heading-{{ meal.id }}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse-{{ meal.id }}" aria-expanded="false"
+                            aria-controls="flush-collapse-{{ meal.id }}">{{ meal.meal_name }}
+                        </button>
+                        </h3>
+                        <div id="flush-collapse-{{ meal.id }}" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading-{{ meal.id }}" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">{{ meal.meal_description }}
+                            </div>
+                        </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="col-md-6 col-xl-4 col-sm-12 menu-category">
+                <h3>Desserts</h3>
+                {% for meal in meals %}
+                {% if meal.meal_type == 4 %}
+                <div class="accordion-item">
+                    <h4 class="accordion-header" id="flush-heading-{{ meal.id }}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse-{{ meal.id }}" aria-expanded="false"
+                            aria-controls="flush-collapse-{{ meal.id }}">{{ meal.meal_name }}
+                        </button>
+                        </h3>
+                        <div id="flush-collapse-{{ meal.id }}" class="accordion-collapse collapse"
+                            aria-labelledby="flush-heading-{{ meal.id }}" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">{{ meal.meal_description }}
+                            </div>
+                        </div>
+                </div>
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    <div class="col-md-6 col-lg-4 col-xl-3 col-sm-8 col-xs-12">
-        <h3>Salads</h3>
-        {% for meal in meals %}
-        {% if meal.meal_type == 1 %}
-        <div class="accordion-item">
-            <h3 class="accordion-header" id="flush-heading-{{ meal.id }}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse-{{ meal.id }}" aria-expanded="false"
-                    aria-controls="flush-collapse-{{ meal.id }}">{{ meal.meal_name }}
-                </button>
-            </h3>
-            <div id="flush-collapse-{{ meal.id }}" class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-{{ meal.id }}" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">{{ meal.meal_description }}
-                </div>
-            </div>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    <div class="col-md-6 col-lg-4 col-xl-3 col-sm-8 col-xs-12">
-        <h3>Main Courses</h3>
-        {% for meal in meals %}
-        {% if meal.meal_type == 2 %}
-        <div class="accordion-item">
-            <h3 class="accordion-header" id="flush-heading-{{ meal.id }}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse-{{ meal.id }}" aria-expanded="false"
-                    aria-controls="flush-collapse-{{ meal.id }}">{{ meal.meal_name }}
-                </button>
-            </h3>
-            <div id="flush-collapse-{{ meal.id }}" class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-{{ meal.id }}" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">{{ meal.meal_description }}
-                </div>
-            </div>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    <div class="col-md-6 col-lg-4 col-xl-3 col-sm-8 col-xs-12">
-        <h3>Side Dishes</h3>
-        {% for meal in meals %}
-        {% if meal.meal_type == 3 %}
-        <div class="accordion-item">
-            <h3 class="accordion-header" id="flush-heading-{{ meal.id }}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse-{{ meal.id }}" aria-expanded="false"
-                    aria-controls="flush-collapse-{{ meal.id }}">{{ meal.meal_name }}
-                </button>
-            </h3>
-            <div id="flush-collapse-{{ meal.id }}" class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-{{ meal.id }}" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">{{ meal.meal_description }}
-                </div>
-            </div>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    <div class="col-md-6 col-lg-4 col-xl-3 col-sm-8 col-xs-12">
-        <h3>Desserts</h3>
-        {% for meal in meals %}
-        {% if meal.meal_type == 4 %}
-        <div class="accordion-item">
-            <h3 class="accordion-header" id="flush-heading-{{ meal.id }}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse-{{ meal.id }}" aria-expanded="false"
-                    aria-controls="flush-collapse-{{ meal.id }}">{{ meal.meal_name }}
-                </button>
-            </h3>
-            <div id="flush-collapse-{{ meal.id }}" class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-{{ meal.id }}" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">{{ meal.meal_description }}
-                </div>
-            </div>
-        </div>
-        {% endif %}
-        {% endfor %}
     </div>
 </div>
 <!-- Drinks -->
-<div class="row">
-    <div class="col-md-6 col-lg-4 col-xl-3 col-sm-8 col-xs-12">
-        <h3>Wine</h3>
-        {% for meal in meals %}
-        {% if meal.meal_type == 0 %}
-        <div class="accordion-item">
-            <h3 class="accordion-header" id="flush-heading-{{ drink.id }}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse-{{ drink.id }}" aria-expanded="false"
-                    aria-controls="flush-collapse-{{ drink.id }}">{{ drink.drink_name }}
-                </button>
-            </h3>
-            <div id="flush-collapse-{{ drink.id }}" class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-{{ drink.id }}" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">{{ drink.drink_description }}
+<div class="row  menu-row">
+    <div class="col-md-8 col-lg-6 col-sm-10 col-xs-12">
+        <div class="row">
+            <div class="col-md-6 col-xl-4 col-sm-12 menu-category">
+                <h3>Wine</h3>
+                {% for meal in meals %}
+                {% if meal.meal_type == 0 %}
+                <div class="accordion-item">
+                    <h4 class="accordion-header" id="flush-heading-{{ drink.id }}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse-{{ drink.id }}" aria-expanded="false"
+                            aria-controls="flush-collapse-{{ drink.id }}">{{ drink.drink_name }}
+                        </button>
+                    </h4>
+                    <div id="flush-collapse-{{ drink.id }}" class="accordion-collapse collapse"
+                        aria-labelledby="flush-heading-{{ drink.id }}" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">{{ drink.drink_description }}
+                        </div>
+                    </div>
                 </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="col-md-6 col-xl-4 col-sm-12 menu-category">
+                <h3>Classic Cocktails</h3>
+                {% for drink in drinks %}
+                {% if drink.drink_type == 1 %}
+                <div class="accordion-item">
+                    <h4 class="accordion-header" id="flush-heading-{{ drink.id }}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse-{{ drink.id }}" aria-expanded="false"
+                            aria-controls="flush-collapse-{{ drink.id }}">{{ drink.drink_name }}
+                        </button>
+                    </h4>
+                    <div id="flush-collapse-{{ drink.id }}" class="accordion-collapse collapse"
+                        aria-labelledby="flush-heading-{{ drink.id }}" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">{{ drink.drink_description }}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="col-md-6 col-xl-4 col-sm-12 menu-category">
+                <h3>Specialty Cocktails</h3>
+                {% for drink in drinks %}
+                {% if drink.drink_type == 2 %}
+                <div class="accordion-item">
+                    <h4 class="accordion-header" id="flush-heading-{{ drink.id }}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse-{{ drink.id }}" aria-expanded="false"
+                            aria-controls="flush-collapse-{{ drink.id }}">{{ drink.drink_name }}
+                        </button>
+                    </h4>
+                    <div id="flush-collapse-{{ drink.id }}" class="accordion-collapse collapse"
+                        aria-labelledby="flush-heading-{{ drink.id }}" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">{{ drink.drink_description }}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="col-md-6 col-xl-4 col-sm-12 menu-category">
+                <h3>Aperitif</h3>
+                {% for drink in drinks %}
+                {% if drink.drink_type == 3 %}
+                <div class="accordion-item">
+                    <h4 class="accordion-header" id="flush-heading-{{ drink.id }}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse-{{ drink.id }}" aria-expanded="false"
+                            aria-controls="flush-collapse-{{ drink.id }}">{{ drink.drink_name }}
+                        </button>
+                    </h4>
+                    <div id="flush-collapse-{{ drink.id }}" class="accordion-collapse collapse"
+                        aria-labelledby="flush-heading-{{ drink.id }}" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">{{ drink.drink_description }}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="col-md-6 col-xl-4 col-sm-12 menu-category">
+                <h3>Digestif</h3>
+                {% for drink in drinks %}
+                {% if drink.drink_type == 4 %}
+                <div class="accordion-item">
+                    <h4 class="accordion-header" id="flush-heading-{{ drink.id }}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse-{{ drink.id }}" aria-expanded="false"
+                            aria-controls="flush-collapse-{{ drink.id }}">{{ drink.drink_name }}
+                        </button>
+                    </h4>
+                    <div id="flush-collapse-{{ drink.id }}" class="accordion-collapse collapse"
+                        aria-labelledby="flush-heading-{{ drink.id }}" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">{{ drink.drink_description }}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="col-md-6 col-xl-4 col-sm-12 menu-category">
+                <h3>Sparkling Wine</h3>
+                {% for drink in drinks %}
+                {% if drink.drink_type == 5 %}
+                <div class="accordion-item">
+                    <h4 class="accordion-header" id="flush-heading-{{ drink.id }}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse-{{ drink.id }}" aria-expanded="false"
+                            aria-controls="flush-collapse-{{ drink.id }}">{{ drink.drink_name }}
+                        </button>
+                    </h4>
+                    <div id="flush-collapse-{{ drink.id }}" class="accordion-collapse collapse"
+                        aria-labelledby="flush-heading-{{ drink.id }}" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">{{ drink.drink_description }}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="col-md-6 col-xl-4 col-sm-12 menu-category">
+                <h3>Beer</h3>
+                {% for drink in drinks %}
+                {% if drink.drink_type == 6 %}
+                <div class="accordion-item">
+                    <h4 class="accordion-header" id="flush-heading-{{ drink.id }}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse-{{ drink.id }}" aria-expanded="false"
+                            aria-controls="flush-collapse-{{ drink.id }}">{{ drink.drink_name }}
+                        </button>
+                    </h4>
+                    <div id="flush-collapse-{{ drink.id }}" class="accordion-collapse collapse"
+                        aria-labelledby="flush-heading-{{ drink.id }}" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            {{ drink.drink_description }}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    <div class="col-md-6 col-lg-4 col-xl-3 col-sm-8 col-xs-12">
-        <h3>Classic Cocktails</h3>
-        {% for drink in drinks %}
-        {% if drink.drink_type == 1 %}
-        <div class="accordion-item">
-            <h3 class="accordion-header" id="flush-heading-{{ drink.id }}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse-{{ drink.id }}" aria-expanded="false"
-                    aria-controls="flush-collapse-{{ drink.id }}">{{ drink.drink_name }}
-                </button>
-            </h3>
-            <div id="flush-collapse-{{ drink.id }}" class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-{{ drink.id }}" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">{{ drink.drink_description }}
-                </div>
-            </div>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    <div class="col-md-6 col-lg-4 col-xl-3 col-sm-8 col-xs-12">
-        <h3>Specialty Cocktails</h3>
-        {% for drink in drinks %}
-        {% if drink.drink_type == 2 %}
-        <div class="accordion-item">
-            <h3 class="accordion-header" id="flush-heading-{{ drink.id }}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse-{{ drink.id }}" aria-expanded="false"
-                    aria-controls="flush-collapse-{{ drink.id }}">{{ drink.drink_name }}
-                </button>
-            </h3>
-            <div id="flush-collapse-{{ drink.id }}" class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-{{ drink.id }}" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">{{ drink.drink_description }}
-                </div>
-            </div>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    <div class="col-md-6 col-lg-4 col-xl-3 col-sm-8 col-xs-12">
-        <h3>Aperitif</h3>
-        {% for drink in drinks %}
-        {% if drink.drink_type == 3 %}
-        <div class="accordion-item">
-            <h3 class="accordion-header" id="flush-heading-{{ drink.id }}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse-{{ drink.id }}" aria-expanded="false"
-                    aria-controls="flush-collapse-{{ drink.id }}">{{ drink.drink_name }}
-                </button>
-            </h3>
-            <div id="flush-collapse-{{ drink.id }}" class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-{{ drink.id }}" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">{{ drink.drink_description }}
-                </div>
-            </div>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    <div class="col-md-6 col-lg-4 col-xl-3 col-sm-8 col-xs-12">
-        <h3>Digestif</h3>
-        {% for drink in drinks %}
-        {% if drink.drink_type == 4 %}
-        <div class="accordion-item">
-            <h3 class="accordion-header" id="flush-heading-{{ drink.id }}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse-{{ drink.id }}" aria-expanded="false"
-                    aria-controls="flush-collapse-{{ drink.id }}">{{ drink.drink_name }}
-                </button>
-            </h3>
-            <div id="flush-collapse-{{ drink.id }}" class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-{{ drink.id }}" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">{{ drink.drink_description }}
-                </div>
-            </div>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    <div class="col-md-6 col-lg-4 col-xl-3 col-sm-8 col-xs-12">
-        <h3>Sparkling Wine</h3>
-        {% for drink in drinks %}
-        {% if drink.drink_type == 5 %}
-        <div class="accordion-item">
-            <h3 class="accordion-header" id="flush-heading-{{ drink.id }}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse-{{ drink.id }}" aria-expanded="false"
-                    aria-controls="flush-collapse-{{ drink.id }}">{{ drink.drink_name }}
-                </button>
-            </h3>
-            <div id="flush-collapse-{{ drink.id }}" class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-{{ drink.id }}" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">{{ drink.drink_description }}
-                </div>
-            </div>
-        </div>
-        {% endif %}
-        {% endfor %}
-    </div>
-    <div class="col-md-6 col-lg-4 col-xl-3 col-sm-8 col-xs-12">
-        <h3>Beer</h3>
-        {% for drink in drinks %}
-        {% if drink.drink_type == 6 %}
-        <div class="accordion-item">
-            <h3 class="accordion-header" id="flush-heading-{{ drink.id }}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse-{{ drink.id }}" aria-expanded="false"
-                    aria-controls="flush-collapse-{{ drink.id }}">{{ drink.drink_name }}
-                </button>
-            </h3>
-            <div id="flush-collapse-{{ drink.id }}" class="accordion-collapse collapse"
-                aria-labelledby="flush-heading-{{ drink.id }}" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">{{ drink.drink_description }}
-                </div>
-            </div>
-        </div>
-        {% endif %}
-        {% endfor %}
     </div>
 </div>
 
-<!-- <h3>Appetizers</h3>
-{% for drink in meals %}
-{% if meal.meal_type == 0 %}
-<tr>
-    <td>{{ meal.meal_name }}</td>
-    <br>
-    <td>{{ meal.meal_description }}</td>
-    <br>
-</tr>
-{% endif %}
-{% endfor %}
-<h3>Salads</h3>
-{% for meal in meals %}
-{% if meal.meal_type == 1 %}
-<tr>
-    <td>{{ meal.meal_name }}</td>
-    <br>
-    <td>{{ meal.meal_description }}</td>
-    <br>
-</tr>
-{% endif %}
-{% endfor %}
-<h3>Main Courses</h3>
-{% for meal in meals %}
-{% if meal.meal_type == 2 %}
-<tr>
-    <td>{{ meal.meal_name }}</td>
-    <br>
-    <td>{{ meal.meal_description }}</td>
-    <br>
-</tr>
-{% endif %}
-{% endfor %}
-<h3>Side Dishes</h3>
-{% for meal in meals %}
-{% if meal.meal_type == 3 %}
-<tr>
-    <td>{{ meal.meal_name }}</td>
-    <br>
-    <td>{{ meal.meal_description }}</td>
-    <br>
-</tr>
-{% endif %}
-{% endfor %}
-<h3>Desserts</h3>
-{% for meal in meals %}
-{% if meal.meal_type == 4 %}
-<tr>
-    <td>{{ meal.meal_name }}</td>
-    <br>
-    <td>{{ meal.meal_description }}</td>
-    <br>
-</tr>
-{% endif %}
-{% endfor %}
-
-<h2>Drinks Menu</h2>
-
-<h3>Wines</h3>
-{% for drink in drinks %}
-{% if drink.drink_type == 0 %}
-<tr>
-    <td>{{ drink.drink_name }}</td>
-    <br>
-    <td>{{ drink.drink_description }}</td>
-    <br>
-</tr>
-{% endif %}
-{% endfor %}
-<h3>Classic Cocktails</h3>
-{% for drink in drinks %}
-{% if drink.drink_type == 1 %}
-<tr>
-    <td>{{ drink.drink_name }}</td>
-    <br>
-    <td>{{ drink.drink_description }}</td>
-    <br>
-</tr>
-{% endif %}
-{% endfor %}
-<h3>Specialty Cocktails</h3>
-{% for drink in drinks %}
-{% if drink.drink_type == 2 %}
-<tr>
-    <td>{{ drink.drink_name }}</td>
-    <br>
-    <td>{{ drink.drink_description }}</td>
-    <br>
-</tr>
-{% endif %}
-{% endfor %}
-<h3>Aperitif</h3>
-{% for drink in drinks %}
-{% if drink.drink_type == 3 %}
-<tr>
-    <td>{{ drink.drink_name }}</td>
-    <br>
-    <td>{{ drink.drink_description }}</td>
-    <br>
-</tr>
-{% endif %}
-{% endfor %}
-<h3>Digestif</h3>
-{% for drink in drinks %}
-{% if drink.drink_type == 4 %}
-<tr>
-    <td>{{ drink.drink_name }}</td>
-    <br>
-    <td>{{ drink.drink_description }}</td>
-    <br>
-</tr>
-{% endif %}
-{% endfor %}
-<h3>Sparkling Wine</h3>
-{% for drink in drinks %}
-{% if drink.drink_type == 5 %}
-<tr>
-    <td>{{ drink.drink_name }}</td>
-    <br>
-    <td>{{ drink.drink_description }}</td>
-    <br>
-</tr>
-{% endif %}
-{% endfor %}
-<h3>Beer</h3>
-{% for drink in drinks %}
-{% if drink.drink_type == 6 %}
-<tr>
-    <td>{{ drink.drink_name }}</td>
-    <br>
-    <td>{{ drink.drink_description }}</td>
-    <br>
-</tr>
-{% endif %}
-{% endfor %}
-
-{% endblock content %} -->
+{% endblock %}
