@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&family=Montserrat:wght@400');
 
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
 /* Navigation Bar */
 nav {
     font-family: 'Montserrat', sans-serif;
@@ -43,6 +47,34 @@ nav span {
     content: "\f0c9";
     color: #E3DAC9;
   }
+
+/* index.html - home page */
+
+#landing-div {
+    height: 80vh;
+    width: 100%;
+    background-color: #E3DAC9;
+}
+
+#landing-div h1 {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 35vh;
+    color: #6E7178;
+    font-size: 7rem;
+    opacity: 0;
+    animation: fade-in 2s ease-in forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 /* Footer */
 footer {
