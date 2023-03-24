@@ -265,6 +265,32 @@ text-align: right;
     padding-bottom: 2rem;
 }
 
+/* Sign In */
+.auth-row {
+    background-color: #E3DAC9;
+    justify-content: center;
+    min-height: 50vh;
+    padding-bottom: 2rem;
+}
+
+.auth-row :first-child {
+    background-color: #A69E83;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.auth-row :first-child #sign-up-redirect {
+    background-color: #3C3E44;
+    color: #E3DAC9;
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 2px;
+}
+
+.auth-row :first-child #sign-up-redirect:hover {
+    background-color: #6E7178;
+}
+
 
 
 /* Footer */
