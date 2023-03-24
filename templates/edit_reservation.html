@@ -1,64 +1,85 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Make a reservation</h1>
-<form method="POST">
-    {% csrf_token %}
-    <div>
-        <p>
-            <label for="full-name">Full Name</label>
-            <input type="text" name="full-name" id="full-name" required value="{{booking_to_edit.booking_full_name}}">
-        </p>
+<h1 class="title">You can make changes to this reservation</h1>
+
+<div class="row" id="form-row">
+    <div class="col-sm-10 col-md-8 col-lg-6 col-xl-4 col-xs-12">
+        <form method="POST">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>
+                        <label for="full-name">Full Name*:&nbsp;</label>
+                    </td>
+                    <td>
+                        <input type="text" name="full-name" id="full-name" value="{{booking_to_edit.booking_full_name}}"
+                            required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email address*:&nbsp;</label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" id="email" value="{{booking_to_edit.booking_email}}" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phone_number">Phone number:&nbsp;</label>
+                    </td>
+                    <td>
+                        <input type="text" name="phone_number" id="phone_number"
+                            value="{{booking_to_edit.booking_phone_number}}">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="number_of_guests">Number of guests*:&nbsp;</label>
+                    </td>
+                    <td>
+                        <select name="number_of_guests" id="number_of_guests" value="{{booking_to_edit.number_of_guests}}>
+                            {% for number in max_guest_num %}
+                            <option value=" {{number}}" {% if number == booking_to_edit.number_of_guests %} selected
+                            {% endif %}>{{number}}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="comment">Additional Information:&nbsp;</label>
+                    </td>
+                    <td>
+                        <textarea name="comment" id="comment" cols="30" rows="10">{{booking_to_edit.comment}}</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="booking-date">Date Of The Reservation*:&nbsp;</label>
+                    </td>
+                    <td>
+                        <input type="date" name="booking-date" id="booking-date" min="{{ min_date }}" required
+                            pattern="\d{4}-\d{2}-\d{2}" value="{{ booking_date_str }}">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="booking-time">Time Of The Reservation*:&nbsp;</label>
+                    </td>
+                    <td>
+                        <select name="booking-time" id="booking-time">
+                            {% for hour in hour_tuple %}
+                            <option value="{{hour}}" {% if hour == time_str %} selected {% endif %}>{{hour}}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <button type="submit" class="btn btn-success" id="submit-btn">Submit</button>
+        </form>
     </div>
-    <div>
-        <p>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required value="{{booking_to_edit.booking_email}}">
-        </p>
-    </div>
-    <div>
-        <p>
-            <label for="phone_number">Phone number</label>
-            <input type="text" name="phone_number" id="phone_number" value="{{booking_to_edit.booking_phone_number}}">
-        </p>
-    </div>
-    <script>
-        console.log({{booking_to_edit.comment}})
-    </script>
-    <div>
-        <p>
-            <label for="number_of_guests">Number of guests</label>
-            <select name="number_of_guests" id="number_of_guests" value="{{booking_to_edit.number_of_guests}}">
-                {% for number in max_guest_num %}
-                <option value="{{number}}" {% if number == booking_to_edit.number_of_guests %} selected {% endif %}>{{number}}</option>
-                {% endfor %}
-            </select>
-        </p>
-    </div>
-    <div>
-        
-        <p>
-            <label for="comment">Notes</label>
-            <textarea name="comment" id="comment" cols="30" rows="10">{{booking_to_edit.comment}}</textarea>
-        </p>
-        <div>
-            <p>
-                <label for="booking-date"></label>
-                <input type="date" name="booking-date" id="booking-date" min="{{ min_date }}" required
-                    pattern="\d{4}-\d{2}-\d{2}" value="{{ booking_date_str }}">
-            </p>
-        </div>
-        <div>
-            <p>
-                <label for="booking-time">Time:</label>
-                <select name="booking-time" id="booking-time">
-                    {% for hour in hour_tuple %}
-                    <option value="{{hour}}" {% if hour == time_str %} selected {% endif %}>{{hour}}</option>
-                    {% endfor %}
-                </select>
-            </p>
-        </div>
-        <button type="submit" class="btn btn-success" id="submit-btn">Submit</button>
-</form>
+</div>
 
 <!-- Modal -->
 <!-- https://getbootstrap.com/docs/4.0/components/modal/ -->
