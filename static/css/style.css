@@ -143,7 +143,7 @@ nav span {
 }
 
 /* Menu Page */
-#menu-title {
+.title {
     text-align: center;
     padding: 2rem 0;
     background-color: #E3DAC9;
@@ -188,6 +188,25 @@ nav span {
     background-color: #6E7178;
     font-size: 0.9rem;
     color: #E3DAC9;
+}
+
+/* Reservation page */
+
+#form-row {
+    background-color: #E3DAC9;
+    color: #3C3E44;
+    padding: 1rem 0 3rem;
+    justify-content: center;
+}
+
+form td {
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    vertical-align: top;
+}
+
+form button {
+    margin-top: 2rem;
 }
 
 /* Footer */
