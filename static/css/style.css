@@ -13,7 +13,9 @@ header {
 
 nav {
     font-family: 'Montserrat', sans-serif;
-    background-color: #6E7178/* #8D949E #6D7278 #6E7178 #55585E #3C3E44*/;
+    background-color: #6E7178
+        /* #8D949E #6D7278 #6E7178 #55585E #3C3E44*/
+    ;
 }
 
 nav a:hover {
@@ -39,20 +41,20 @@ nav span {
 }
 
 /* https://fontawesome.com/v5/docs/web/advanced/css-pseudo-elements */
-  .icon::before {
+.icon::before {
     display: inline-block;
     font-style: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-  }
+}
 
-  .hamburger::before {
+.hamburger::before {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     content: "\f0c9";
     color: #E3DAC9;
-  }
+}
 
 /* index.html - home page */
 
@@ -77,6 +79,7 @@ nav span {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -102,7 +105,7 @@ nav span {
 }
 
 #btn-container button:hover {
-        border: 1px solid #E3DAC9;
+    border: 1px solid #E3DAC9;
 }
 
 #menu-btn {
@@ -123,7 +126,7 @@ nav span {
     font-family: "Open Sans", sans-serif;
 }
 
-#about-us-header h2{
+#about-us-header h2 {
     font-size: 1.6rem;
     margin-bottom: 2rem;
     text-align: center;
@@ -160,14 +163,31 @@ nav span {
 .menu-row h3 {
     font-family: "Montserrat", sans-serif;
     text-align: center;
-    border: 1px solid #6E7178;
     background-color: #6E7178;
-    color: #E3DAC9;
+    color: #3C3E44;
     padding: 0.5rem 0;
+    color: #E3DAC9;
 }
 
 .menu-category {
     padding: 0 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.menu-category h4 {
+    margin: 0.5rem;
+    background-color: #E3DAC9;
+    border-bottom: 1px solid #6E7178;
+    height: 3rem;
+    padding: 0.2rem;
+    color: #3C3E44;
+}
+
+.menu-description {
+    padding: 1rem;
+    background-color: #6E7178;
+    font-size: 0.9rem;
+    color: #E3DAC9;
 }
 
 /* Footer */
