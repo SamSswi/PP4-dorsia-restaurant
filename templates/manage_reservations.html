@@ -1,60 +1,68 @@
 {% extends 'base.html' %}
 {% block content %}
-<!-- https://getbootstrap.com/docs/5.3/components/accordion/#how-it-works -->
-<h2> You are now managing the bookings made by the user: {{ username }} </h2>
+<div class="row top-row">
+    <div class="col-md-8 col-sm-10 col-xs-12 col-lg-6" id="mng-res-col">
+        <h2 class="title"> You are now managing the bookings made by the user: {{ username }} </h2>
 
-<div class="accordion accordion-flush" id="accordionFlushExample">
-    {% for booking in bookings %}
-    <div class="accordion-item">
-        <h3 class="accordion-header" id="flush-heading-{{ booking.id }}">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapse-{{ booking.id }}" aria-expanded="false"
-                aria-controls="flush-collapse-{{ booking.id }}">
-                {{ booking.booking_full_name }}: {{booking.booking_date}} {{booking.time}} -
-                {{ booking.number_of_guests }} guests
-            </button>
-        </h3>
-        <div id="flush-collapse-{{ booking.id }}" class="accordion-collapse collapse"
-            aria-labelledby="flush-heading-{{ booking.id }}" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-                <!-- https://getbootstrap.com/docs/4.0/content/tables/ -->
-                <table class="table table-striped">
-                    <tbody>
-                        <tr>
-                            <th scope="row">Booking Name: </th>
-                            <td>{{ booking.booking_full_name }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Booking email: </th>
-                            <td>{{ booking.booking_email }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Booking phone number: </th>
-                            <td>{{ booking.booking_phone_number }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Number of guests: </th>
-                            <td>{{ booking.number_of_guests }}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Booking date and time: </th>
-                            <td>{{ booking.booking_date }} {{ booking.time }} </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Comments: </th>
-                            <td>{{ booking.comment }}</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- https://getbootstrap.com/docs/5.3/components/accordion/#how-it-works -->
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            {% for booking in bookings %}
+            <div class="accordion-item">
+                <h3 class="accordion-header" id="flush-heading-{{ booking.id }}">
+                    <button class="accordion-button collapsed header-btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapse-{{ booking.id }}" aria-expanded="false"
+                        aria-controls="flush-collapse-{{ booking.id }}">
+                        {{ booking.booking_full_name }}: {{booking.booking_date}} {{booking.time}} -
+                        {{ booking.number_of_guests }} guests
+                    </button>
+                </h3>
+                <div id="flush-collapse-{{ booking.id }}" class="accordion-collapse collapse"
+                    aria-labelledby="flush-heading-{{ booking.id }}" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <!-- https://getbootstrap.com/docs/4.0/content/tables/ -->
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Booking Name: </th>
+                                    <td>{{ booking.booking_full_name }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Booking email: </th>
+                                    <td>{{ booking.booking_email }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Booking phone number: </th>
+                                    <td>{{ booking.booking_phone_number }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Number of guests: </th>
+                                    <td>{{ booking.number_of_guests }}</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Booking date and time: </th>
+                                    <td>{{ booking.booking_date }} {{ booking.time }} </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Comments: </th>
+                                    <td>{{ booking.comment }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row action-btns">
+                        <div class="col">
+                            <a href="{% url 'edit_reservation' booking_id=booking.id %}">
+                                <button type="button" class="btn btn-warning action-btn">Edit</button>
+                            </a>
+                            <a href="{% url 'delete_reservation' booking_id=booking.id %}">
+                                <button type="button" class="btn btn-danger action-btn" id="delete-btn">Delete</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a href="{% url 'edit_reservation' booking_id=booking.id %}">
-                <button type="button" class="btn btn-warning">Edit</button>
-            </a>
-            <a href="{% url 'delete_reservation' booking_id=booking.id %}">
-                <button type="button" class="btn btn-danger" id="delete-btn" data-toggle="modal">Delete</button>
-            </a>
+            {% endfor %}
         </div>
     </div>
-    {% endfor %}
 </div>
 {% endblock content %}
