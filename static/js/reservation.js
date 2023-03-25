@@ -2,11 +2,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const dateInput = document.getElementById('booking-date')
     const submitBtn = document.getElementById('submit-btn')
+    const startDisabled = submitBtn.dataset.disabled === 'true'
     // https://getbootstrap.com/docs/5.0/components/modal/
     const myModal = new bootstrap.Modal(document.getElementById('exampleModalCenter'))
     const closeModalButtons = document.querySelectorAll('[data-dismiss="modal"]')
     // https://www.scaler.com/topics/javascript-disable-button/
-    submitBtn.disabled = true
+    submitBtn.disabled = startDisabled
     dateInput.addEventListener('change', () => {
         const inputYear = Number(dateInput.value.split('-')[0])
         const inputMonth = Number(dateInput.value.split('-')[1]) - 1
