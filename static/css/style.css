@@ -4,6 +4,7 @@ body {
     font-family: "Open Sans", sans-serif;
     overflow-x: hidden;
     color: #3C3E44;
+    padding-top: 3rem;
 }
 
 header {
@@ -23,6 +24,7 @@ nav {
     background-color: #6E7178
         /* #8D949E #6D7278 #6E7178 #55585E #3C3E44*/
     ;
+    position: fixed;
 }
 
 nav a:hover {
