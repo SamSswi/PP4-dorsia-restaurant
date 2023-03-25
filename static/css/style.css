@@ -199,6 +199,22 @@ nav span {
     color: #E3DAC9;
 }
 
+#menu-make-res-btn {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    opacity: 0.6;
+    background-color: #3C3E44;
+    color: #E3DAC9;
+    border: 2px solid #E3DAC9;
+    font-family: "Montserrat", sans-serif;
+    width: 8rem;
+}
+
+#menu-make-res-btn:hover {
+    opacity: 1;
+}
+
 /* Reservation page */
 
 #form-row {
