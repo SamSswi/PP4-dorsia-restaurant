@@ -64,10 +64,6 @@ def reservation(request):
     return render(request, 'reservation.html', context)
 
 
-def contact(request):
-    return render(request, 'contact.html')
-
-
 def manage_reservations(request):
     username = request.user
     bookings = Booking.objects.filter(
