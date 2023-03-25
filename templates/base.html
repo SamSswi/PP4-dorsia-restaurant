@@ -49,6 +49,9 @@
             <!-- https://github.com/Code-Institute-Solutions/django-blog-starter-files/blob/master/templates/base.html -->
             {% if user.is_authenticated %}
             <li class="nav-item">
+              <a class="nav-link" href="{% url 'manage_reservations' %}">Manage Reservations</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="{% url 'account_logout' %}">Log Out</a>
             </li>
             {% else %}
