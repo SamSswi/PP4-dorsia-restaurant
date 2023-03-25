@@ -35,7 +35,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
       <p>{% blocktrans %}
         To make a reservation, you must authenticate yourself.</br>
         If you have not created an account yet, then please
-        <a href="{{ signup_url }}" id="sign-up-redirect">Register</a> first.{% endblocktrans %}</p>
+        <a href="{{ signup_url }}" class="auth-redirect">Register</a> first.{% endblocktrans %}</p>
       <!-- {% endif %} -->
 
       <form class="login" method="POST" action="{% url 'account_login' %}">

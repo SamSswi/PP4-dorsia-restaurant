@@ -279,7 +279,7 @@ text-align: right;
     padding: 1rem;
 }
 
-.auth-row :first-child #sign-up-redirect {
+.auth-row :first-child .auth-redirect {
     background-color: #3C3E44;
     color: #E3DAC9;
     border-radius: 3px;
@@ -287,7 +287,7 @@ text-align: right;
     padding: 2px;
 }
 
-.auth-row :first-child #sign-up-redirect:hover {
+.auth-row :first-child .auth-redirect:hover {
     background-color: #6E7178;
 }
 
