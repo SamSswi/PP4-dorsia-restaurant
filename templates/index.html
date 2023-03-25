@@ -7,8 +7,8 @@
 </div>
 <div class="row" id="btn-container">
     <div class="col-md-4">
-        <button type="button" class="btn" id="menu-btn">Menu</button>
-        <button type="button" class="btn" id="make-a-reservation-btn">Make a Reservation</button>
+        <a href="{% url 'menu' %}"><button type="button" class="btn" id="menu-btn">Menu</button></a>
+        <a href="{% url 'reservation' %}"><button type="button" class="btn" id="make-a-reservation-btn">Make a Reservation</button></a>
     </div>
 </div>
 <div class="row" id="about-us">
