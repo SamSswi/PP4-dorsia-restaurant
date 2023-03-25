@@ -7,7 +7,7 @@
         <!-- https://getbootstrap.com/docs/5.3/components/accordion/#how-it-works -->
         <div class="accordion accordion-flush" id="accordionFlushExample">
             {% for booking in bookings %}
-            <div class="accordion-item">
+            <div class="accordion-item" data-bookingdate="{{booking.booking_date}}">
                 <h3 class="accordion-header" id="flush-heading-{{ booking.id }}">
                     <button class="accordion-button collapsed header-btn" type="button" data-bs-toggle="collapse"
                         data-bs-target="#flush-collapse-{{ booking.id }}" aria-expanded="false"
@@ -65,4 +65,5 @@
         </div>
     </div>
 </div>
+<script src="/static/js/manage_reservations.js"></script>
 {% endblock content %}
