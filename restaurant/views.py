@@ -5,6 +5,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.views import generic, View
 from .models import Meal, Drink, Booking
 from datetime import date, timedelta, time, datetime
+from django.contrib import messages
 
 
 def home_page(request):
@@ -48,6 +49,7 @@ def reservation(request):
             time=time,
             comment=comment
         )
+        messages.success(request, 'You have successfully made a reservation')
         return redirect('home_page')
     # variables
     max_guest_num = tuple(range(1, 21))
@@ -99,6 +101,9 @@ def edit_reservation(request, booking_id):
         booking_to_edit.time = time
         booking_to_edit.comment = comment
         booking_to_edit.save()
+        messages.success(
+            request,
+            'You have successfully made changes to the reservation')
         return redirect('manage_reservations')
     # variables
     hour_tuple = (
@@ -119,6 +124,9 @@ def delete_reservation(request, booking_id):
     booking = Booking.objects.get(id=booking_id)
     if request.method == "POST":
         booking.delete()
+        messages.success(
+            request,
+            'You have successfully deleted the reservation')
         return redirect('manage_reservations')
     context = {'booking': booking}
     return render(request, 'delete_reservation.html', context)

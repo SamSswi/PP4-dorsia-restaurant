@@ -65,6 +65,12 @@ nav span {
     color: #E3DAC9;
 }
 
+.msg-container {
+    position: fixed;
+    top: 5rem;
+    opacity: 0.8;
+}
+
 /* index.html - home page */
 
 #landing-div {
