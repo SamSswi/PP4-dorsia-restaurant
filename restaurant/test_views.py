@@ -93,6 +93,8 @@ class TestViews(TestCase):
         )
         response = self.client.post(f'/delete_reservation/{booking.id}/', {})
         self.assertRedirects(response, '/manage_reservations/')
+        existing_bookings = Booking.objects.filter(id=booking.id)
+        self.assertEqual(len(existing_bookings), 0)
 
     def test_can_edit_reservation(self):
         self.client.login(username='testuser', password='TestPassword12345')
