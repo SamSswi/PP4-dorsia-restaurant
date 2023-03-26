@@ -117,8 +117,8 @@
         <div class="row">
             <div class="col-md-6 col-xl-4 col-sm-12 menu-category">
                 <h3>Wine</h3>
-                {% for meal in meals %}
-                {% if meal.meal_type == 0 %}
+                {% for drink in drinks %}
+                {% if drink.drink_type == 0 %}
                 <div class="accordion-item">
                     <h4 class="accordion-header" id="flush-heading-{{ drink.id }}-drink">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -126,11 +126,6 @@
                             aria-controls="flush-collapse-{{ drink.id }}-drink">{{ drink.drink_name }}
                         </button>
                     </h4>
-                    <div id="flush-collapse-{{ drink.id }}-drink" class="accordion-collapse collapse menu-description"
-                        aria-labelledby="flush-heading-{{ drink.id }}-drink" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">{{ drink.drink_description }}
-                        </div>
-                    </div>
                 </div>
                 {% endif %}
                 {% endfor %}
