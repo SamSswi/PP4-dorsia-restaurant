@@ -419,6 +419,11 @@ footer a {
     form button {
         margin-top: 1.5rem;
     }
+
+    /* Modal */
+    #exampleModalCenter {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 350px) {
@@ -458,4 +463,21 @@ footer a {
     form button {
         margin-top: 1rem;
     }
+
+    /* Manage reservation page */
+    #mng-res-col {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    #mng-res-col .action-btns {
+        background-color: #E3DAC9;
+        justify-content: center;
+        padding-bottom: 2rem;
+    }
+    
+    #mng-res-col a {
+        margin: 0 2rem;
+    }
+    
 }
