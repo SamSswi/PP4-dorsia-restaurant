@@ -351,26 +351,27 @@ footer a {
 }
 
 @media (max-width: 900px) {
+
     /* Home page */
     #landing-div {
         height: 70vh;
     }
-    
+
     #landing-div h1 {
         font-weight: 300;
         padding-top: 30vh;
         font-size: 6rem;
     }
-    
+
     #about-us {
         padding: 2rem 1rem 1rem;
         font-size: 1rem;
     }
-    
+
     #about-us-header h2 {
         font-size: 1.2rem;
     }
-    
+
     #about-us i {
         font-size: 2rem;
     }
@@ -378,6 +379,7 @@ footer a {
 
 
 @media (max-width: 600px) {
+
     /* Home page */
     #landing-div {
         height: 50vh;
@@ -387,17 +389,72 @@ footer a {
         padding-top: 20vh;
         font-size: 4rem;
     }
-    
+
     #btn-container button {
         padding: 2px;
         font-size: 1rem;
     }
-    
+
     #menu-btn {
         margin-right: 10px;
     }
-    
+
     #make-a-reservation-btn {
         margin-left: 10px;
+    }
+
+    /* Make a reservation page */
+
+    #form-row {
+        padding: 1rem 0 2rem;
+        justify-content: center;
+    }
+
+    form td {
+        padding: 0.4rem;
+        font-size: 0.8rem;
+        vertical-align: top;
+    }
+
+    form button {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 350px) {
+
+    /* Menu page */
+    .title {
+        padding: 1rem;
+    }
+
+    .menu-category h4 {
+        height: 4rem;
+        font-size: 0.5rem;
+    }
+
+    #menu-make-res-btn {
+        border: 1px solid #E3DAC9;
+    }
+
+    /* Make a reservation page */
+
+    #form-row {
+        padding: 1rem 0 2rem;
+        justify-content: center;
+    }
+
+    form td {
+        padding: 0.4rem;
+        font-size: 0.8rem;
+        vertical-align: top;
+    }
+
+    #comment {
+        columns: 20;
+    }
+
+    form button {
+        margin-top: 1rem;
     }
 }
