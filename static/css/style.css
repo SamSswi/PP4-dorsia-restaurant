@@ -450,8 +450,9 @@ footer a {
         vertical-align: top;
     }
 
-    #comment {
-        columns: 20;
+    textarea {
+        width: 175px;
+        height: 100px;
     }
 
     form button {
