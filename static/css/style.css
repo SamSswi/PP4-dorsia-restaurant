@@ -381,6 +381,12 @@ footer a {
         text-align: left;
         padding-top: 1rem;
     }
+    
+    /* Footer */
+    
+    footer table td {
+        font-size: smaller;
+    }
 }
 
 
@@ -485,5 +491,4 @@ footer a {
     #mng-res-col a {
         margin: 0 2rem;
     }
-    
 }
