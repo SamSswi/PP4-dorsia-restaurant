@@ -7,6 +7,11 @@ body {
     padding-top: 3rem;
 }
 
+.row {
+    --bs-gutter-x: 0 !important;
+    --bs-gutter-y: 0 !important;
+}
+
 header {
     width: 100%;
 }
@@ -282,7 +287,7 @@ form button {
 }
 
 .edit-btn {
-text-align: right;
+    text-align: right;
 }
 
 #delete-btn-row {
@@ -295,6 +300,7 @@ text-align: right;
     justify-content: center;
     min-height: 50vh;
     padding-bottom: 2rem;
+    --bs-gutter-x: 1.5rem !important;
 }
 
 .auth-row :first-child {
@@ -342,4 +348,8 @@ footer a {
 
 #copyright {
     margin-top: 1rem;
+}
+
+@media (max-width: 500px) {
+
 }
