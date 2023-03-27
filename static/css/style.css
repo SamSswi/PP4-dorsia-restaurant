@@ -350,6 +350,54 @@ footer a {
     margin-top: 1rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
+    /* Home page */
+    #landing-div {
+        height: 70vh;
+    }
+    
+    #landing-div h1 {
+        font-weight: 300;
+        padding-top: 30vh;
+        font-size: 6rem;
+    }
+    
+    #about-us {
+        padding: 2rem 1rem 1rem;
+        font-size: 1rem;
+    }
+    
+    #about-us-header h2 {
+        font-size: 1.2rem;
+    }
+    
+    #about-us i {
+        font-size: 2rem;
+    }
+}
 
+
+@media (max-width: 600px) {
+    /* Home page */
+    #landing-div {
+        height: 50vh;
+    }
+
+    #landing-div h1 {
+        padding-top: 20vh;
+        font-size: 4rem;
+    }
+    
+    #btn-container button {
+        padding: 2px;
+        font-size: 1rem;
+    }
+    
+    #menu-btn {
+        margin-right: 10px;
+    }
+    
+    #make-a-reservation-btn {
+        margin-left: 10px;
+    }
 }
