@@ -375,6 +375,12 @@ footer a {
     #about-us i {
         font-size: 2rem;
     }
+
+    /* Delete reservation */  
+    .edit-btn {
+        text-align: left;
+        padding-top: 1rem;
+    }
 }
 
 
@@ -464,7 +470,7 @@ footer a {
         margin-top: 1rem;
     }
 
-    /* Manage reservation page */
+    /* Manage reservations page */
     #mng-res-col {
         padding: 0.5rem;
         font-size: 0.8rem;

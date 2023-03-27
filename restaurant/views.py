@@ -111,12 +111,14 @@ def edit_reservation(request, booking_id):
         '11:00 pm', '12:00 am', '1:00 am', '2:00 am',
         '3:00 am', '4:00 am')
     max_guest_num = tuple(range(1, 21))
+    min_date = date.today() + timedelta(days=1)
     context = {
         'max_guest_num': max_guest_num,
         'booking_to_edit': booking_to_edit,
         'booking_date_str': booking_date_str,
         'time_str': time_str,
-        'hour_tuple': hour_tuple}
+        'hour_tuple': hour_tuple,
+        'min_date': min_date}
     return render(request, 'edit_reservation.html', context)
 
 
