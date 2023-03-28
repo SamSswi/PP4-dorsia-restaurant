@@ -116,5 +116,8 @@ This reservation is made for a future date so the user can still edit it:
 The following reservation cannot be edited anymore by the user. In case the user wants to modify it or cancel it, they should contact the restaurant.
 ![Screenshot of the make a reservation page past](https://myoctocat.com/assets/images/base-octocat.svg)
 
+## Edit Reservation
+This page displays the reservation form pre-populated using booking_id the user is able to change any piece of information they want and submit it. After submitting the form they're redirected to the Manage Reservations page where they can view the updated reservation.
+![Screenshot of the make a reservation page past](https://myoctocat.com/assets/images/base-octocat.svg)
 
 
