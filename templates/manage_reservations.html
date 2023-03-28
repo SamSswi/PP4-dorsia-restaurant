@@ -4,6 +4,7 @@
     <div class="col-md-8 col-sm-10 col-xs-12 col-lg-6" id="mng-res-col">
         <h2 class="title"> You are now managing the bookings made by the user: {{ username }} </h2>
         <p>Please take notice you cannot edit reservations that are already expired or due tomorrow ({{min_date}}) or earlier</p>
+        <p>For emergencies or last minute cancellations call: +1 555-555-5555</p>
         <!-- https://getbootstrap.com/docs/5.3/components/accordion/#how-it-works -->
         <div class="accordion accordion-flush" id="accordionFlushExample">
             {% for booking in bookings %}
