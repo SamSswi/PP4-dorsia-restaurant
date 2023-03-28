@@ -123,3 +123,21 @@ This page displays the reservation form pre-populated using booking_id the user 
 ## Delete Reservation
 This page displays information about the reservation the user chose to delete and gives them a chance to change their mind before definitively canceling their reservation.
 ![Screenshot of the delete reservation page past](https://myoctocat.com/assets/images/base-octocat.svg)
+
+<hr>
+<br>
+
+# Technologies Used
+- Python - the core programming language
+- Django - the Python framework used
+- Bootstrap - used to create responsive design
+- ElephatSQL - used for storing the database
+- SQLite - the database used to run the tests 
+- Google Fonts - used to get the fonts for the project
+- Font Awesome - used to obtain the icons
+- Git - used for version control
+- GitHub - used to store the code
+- GitPod - the development environment
+- Heroku - the platform used to deploy the application
+- Lucidchart - used to create the database diagram
+- Balsamiq Wireframes - used to make the wireframes
