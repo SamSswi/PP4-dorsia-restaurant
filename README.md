@@ -118,6 +118,8 @@ The following reservation cannot be edited anymore by the user. In case the user
 
 ## Edit Reservation
 This page displays the reservation form pre-populated using booking_id the user is able to change any piece of information they want and submit it. After submitting the form they're redirected to the Manage Reservations page where they can view the updated reservation.
-![Screenshot of the make a reservation page past](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot of the edit reservation page past](https://myoctocat.com/assets/images/base-octocat.svg)
 
-
+## Delete Reservation
+This page displays information about the reservation the user chose to delete and gives them a chance to change their mind before definitively canceling their reservation.
+![Screenshot of the delete reservation page past](https://myoctocat.com/assets/images/base-octocat.svg)
