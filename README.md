@@ -55,3 +55,13 @@ All my User Stories for this project with their acceptance criteria and tasks ca
 13. As a User I can contact the restaurant so that I can receive information I am interested in, and communicate important information to the restaurant administration
 
 14. As a Logged In User I can edit my personal information so that the information I use for future bookings is updated and my privacy is safe
+
+## Scope
+To achieve the desired goals, the following features are included:
+- Responsive navigation bar to allow navigation to most pages of the website
+- Landing page with information about the restaurant and buttons for menu and making a reservation.
+- Menu page with the food and drinks menu
+- Make a reservation page, where the logged-in users have access to a booking form to make a reservation.
+- Manage Reservations page, where logged-in users can read, edit and delete their reservations.
+- Edit reservation page, where the logged-in users can edit the details of one of their reservations.
+- Delete reservation page, where the logged-in users who pushed the delete button on a reservation can review and take decisive action on it.
