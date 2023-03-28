@@ -141,3 +141,12 @@ This page displays information about the reservation the user chose to delete an
 - Heroku - the platform used to deploy the application
 - Lucidchart - used to create the database diagram
 - Balsamiq Wireframes - used to make the wireframes
+
+# Testing
+## Manual Testing
+## Automated testing
+## Bugs and fixes
+
+# Deployment
+
+# Credits
