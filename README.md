@@ -82,3 +82,24 @@ Note: The actual website can differ from the original wireframes.
 
 ## Colors
 The colors I chose for this website are a shade of bone (##E3DAC9) and a warm gray (#6E7178) with subtle variations. It is not designed to be an attention-grabbing color combination, but it is supposed to suggest warmth and elegance. 
+
+# Features
+
+## Navigation bar
+The navigation bar contains links to all the relevant active pages. The Edit Reservation and Delete Reservation pages can be accessed from the Manage Reservations page, as they require a booking_id to know what reservation to act upon.
+
+If the user is logged in, the right side of the Navigation Bar displays the following links: "Manage Reservations" and "Log Out".
+![Screenshot of the navigation bar initial](https://myoctocat.com/assets/images/base-octocat.svg)
+If the user is not logged in, then the options on the right side of the Navigation bar are to log in or register.
+![Screenshot of the navigation bar logged-in user](https://myoctocat.com/assets/images/base-octocat.svg)
+The navigation bar is responsive and collapses on smaller screens.
+![Screenshot of the navigation bar collapsed](https://myoctocat.com/assets/images/base-octocat.svg)
+
+
+## Home page
+The home page features a landing area (where the name "Dorsia" is displayed), a bar with buttons allowing the user to access the menu or make a reservation, and an About Us section with a brief description of the restaurant.
+![Screenshot of the home page](https://myoctocat.com/assets/images/base-octocat.svg)
+
+## Menu
+The menu page displays separately the sections of the menu. Each item has a name and a description. The menu items can be added, edited or deleted by the admin in the backend.
+![Screenshot of the menu page](https://myoctocat.com/assets/images/base-octocat.svg)
