@@ -1,5 +1,5 @@
 # Dorsia Restaurant
-![Screenshot of a am I responsive](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot of a am I responsive](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680042938/Dorsia%20PP4%20Images/Readme/am_i_responsive_ggcsod.jpg)
 
 [Live application can be found here](https://pages.github.com/)
 
@@ -73,10 +73,10 @@ The three custom models are Booking, Meal, and Drink. The Booking model allows t
 
 In the Relationship Diagram below, it can be seen how the models relate to each other.
 
-![Screenshot of a am I responsive](https://myoctocat.com/assets/images/base-octocat.svg)
+![Relationship Diagram](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680040304/Dorsia%20PP4%20Images/Readme/DatabaseTables_xq8xes.jpg)
 
 ## Wireframes
-[The Wireframes can be viewed here.](https://en.wikipedia.org/wiki/American_Psycho)
+[The Wireframes can be viewed here.](/WIREFRAMES.md)
 
 Note: The actual website can differ from the original wireframes.
 
