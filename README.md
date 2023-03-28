@@ -107,5 +107,14 @@ The menu page displays separately the sections of the menu. Each item has a name
 ## Make a Reservation
 This page can be accessed only by the logged-in users. The visitors who are not registered yet, are redirected to the Sign Up page.
 The page conatins a form the user can fill. The fields are not pre-populated.
+![Screenshot of the make a reservation page](https://myoctocat.com/assets/images/base-octocat.svg)
+
+## Manage Reservations
+The link to this page is displayed in the navbar to the logged in users. This page shows the user a list of the reservations they have previously made, and offers them the opportunity to Edit or Delete the reservations that have not expired or are not less than one day away from the current date.
+This reservation is made for a future date so the user can still edit it:
+![Screenshot of the make a reservation page future](https://myoctocat.com/assets/images/base-octocat.svg)
+The following reservation cannot be edited anymore by the user. In case the user wants to modify it or cancel it, they should contact the restaurant.
+![Screenshot of the make a reservation page past](https://myoctocat.com/assets/images/base-octocat.svg)
+
 
 
