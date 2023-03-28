@@ -20,9 +20,6 @@ def menu(request):
 
 
 @login_required
-# class MakeReservation(View):
-#     model = Booking
-#     template_name = 'reservation.html'
 def reservation(request):
     if request.method == 'POST':
         booking_full_name = request.POST.get('full-name')
@@ -66,6 +63,7 @@ def reservation(request):
     return render(request, 'reservation.html', context)
 
 
+@login_required
 def manage_reservations(request):
     username = request.user
     bookings = Booking.objects.filter(
@@ -74,6 +72,7 @@ def manage_reservations(request):
     return render(request, 'manage_reservations.html', context)
 
 
+@login_required
 def edit_reservation(request, booking_id):
     booking_to_edit = Booking.objects.get(id=booking_id)
     # https://stackoverflow.com/questions/14619494/how-to-understand-strptime-vs-strftime#:~:text=strptime%20is%20short%20for%20%22parse,seen%20strptime%20used%20since%20DateTime.
@@ -122,6 +121,7 @@ def edit_reservation(request, booking_id):
     return render(request, 'edit_reservation.html', context)
 
 
+@login_required
 def delete_reservation(request, booking_id):
     booking = Booking.objects.get(id=booking_id)
     if request.method == "POST":
