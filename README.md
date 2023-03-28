@@ -146,6 +146,8 @@ This page displays information about the reservation the user chose to delete an
 ## Manual Testing
 ## Automated testing
 ## Bugs and fixes
+- After finishing the menu page I noticed the Wine cathegory was not displaying the list of items in the backend. The issue appeared to be the code looping through an inexistent meal cathegory. To fix this I put the right parameters to the Django loop.
+- **Submit Button Bug** - On the Reservation page, the submit button is 'disabled' by default to prevent the users from submitting a form without a date selected. It is only enabled when the user selects a valid date. I wanted to use the same 'form' but pre-populated on the Edit Reservation page. But when I linked the same script to it, the submit button was 'disabled' by default, and the user had to select the date again, even if they didn't want to change it, only to activate the submit button. To fix it, I added a data attribute to the submit button of both pages so the script can differentiate between them.
 
 # Deployment
 
