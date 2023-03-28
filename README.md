@@ -26,3 +26,32 @@ The users are presented with:
 The website offers a responsive design and allows for intuitive navigation.
 
 ## User Stories
+All my User Stories for this project with their acceptance criteria and tasks can be found [here](https://github.com/users/SamSswi/projects/5)
+
+1. As an Admin I can log in as a super user so that I can access the backend of the website
+
+2. As an Admin I can make changes to the menu items so that the users sees an up-to-date menu
+
+3. As a User I can view detailed info about the items in the menu so that I have a better familiarity with the particularities of each meal served
+
+4. As a User I can view the items in the restaurant menu in a clear way so that I know beforehand what dishes and drinks are served, and can get familiar with the menu of the restaurant
+
+5. As a User I can easily and intuitively navigate the website so that I can view the content I am interested in
+
+6. As a user I can Log In or Sign Up with email and password so that I can create an account and enjoy the services of the restaurant
+
+7. As a User I can make a reservation at the restaurant so that I can enjoy the foods, drinks, and services of this restaurant
+
+8. As a User I can View and Edit my bookings so that I can personally manage my reservations without contacting the restaurant
+
+9. As a User I can ** a front-end interface that meets accessibility guidelines and follows the principles of UX design** so that I can interact with the web application in an intuitive and easy-to-use way
+
+10. As a User I can see the key information on the home page so that I won't have to search for it
+
+11. As a User I can Sign Up with a social media account so that the necessary information is auto-filled
+
+12. As a User I can have suitable information about potential allergens in the menu items so that the health and safety of me and my guests are preserved
+
+13. As a User I can contact the restaurant so that I can receive information I am interested in, and communicate important information to the restaurant administration
+
+14. As a Logged In User I can edit my personal information so that the information I use for future bookings is updated and my privacy is safe
