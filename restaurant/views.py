@@ -68,7 +68,10 @@ def manage_reservations(request):
     username = request.user
     bookings = Booking.objects.filter(
         customer_id=username).order_by('-booking_date')
-    context = {'bookings': bookings, 'username': username}
+    # https://stackoverflow.com/questions/1506901/cleanest-and-most-pythonic-way-to-get-tomorrows-date
+    min_date = date.today() + timedelta(days=1)
+    context = {
+        'bookings': bookings, 'username': username, 'min_date': min_date}
     return render(request, 'manage_reservations.html', context)
 
 
