@@ -103,3 +103,9 @@ The home page features a landing area (where the name "Dorsia" is displayed), a 
 ## Menu
 The menu page displays separately the sections of the menu. Each item has a name and a description. The menu items can be added, edited or deleted by the admin in the backend.
 ![Screenshot of the menu page](https://myoctocat.com/assets/images/base-octocat.svg)
+
+## Make a Reservation
+This page can be accessed only by the logged-in users. The visitors who are not registered yet, are redirected to the Sign Up page.
+The page conatins a form the user can fill. The fields are not pre-populated.
+
+
