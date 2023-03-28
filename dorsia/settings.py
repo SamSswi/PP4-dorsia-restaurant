@@ -16,6 +16,7 @@ import dj_database_url
 from django.contrib.messages import constants as messages
 if os.path.isfile('env.py'):
     import env
+import sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -111,16 +112,16 @@ WSGI_APPLICATION = 'dorsia.wsgi.application'
 #     }
 # }
 
-if 'test':
+DATABASES = {
+        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
+# https://stackoverflow.com/questions/4650509/different-db-for-testing-in-django
+if 'test' in sys.argv:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': BASE_DIR / 'db.sqlite3',
         }
-    }
-else:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
 
 
