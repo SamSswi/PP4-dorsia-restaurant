@@ -65,3 +65,20 @@ To achieve the desired goals, the following features are included:
 - Manage Reservations page, where logged-in users can read, edit and delete their reservations.
 - Edit reservation page, where the logged-in users can edit the details of one of their reservations.
 - Delete reservation page, where the logged-in users who pushed the delete button on a reservation can review and take decisive action on it.
+
+## Database
+The website requires a database to function and store information. I built three custom models for that and used the built-in User model for user authentication.
+
+The three custom models are Booking, Meal, and Drink. The Booking model allows the logged-in user to make a reservation. The Meal and Drink models help the admin update the menu from the backend without editing the website code.
+
+In the Relationship Diagram below, it can be seen how the models relate to each other.
+
+![Screenshot of a am I responsive](https://myoctocat.com/assets/images/base-octocat.svg)
+
+## Wireframes
+[The Wireframes can be viewed here.](https://en.wikipedia.org/wiki/American_Psycho)
+
+Note: The actual website can differ from the original wireframes.
+
+## Colors
+The colors I chose for this website are a shade of bone (##E3DAC9) and a warm gray (#6E7178) with subtle variations. It is not designed to be an attention-grabbing color combination, but it is supposed to suggest warmth and elegance. 
