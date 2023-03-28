@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<h3 class="title"> You have clicked the delete button on this reservation. Please read carefully the details of your
-    reservation
+<h3 class="title"> You have decided to cancel this reservation. Please read carefully the details of your reservation
     before taking a decisive action on it. </h3>
 <div class="row btn-row">
     <div class="col-md-2">
@@ -11,7 +10,7 @@
     </div>
     <div class="col-md-2 edit-btn">
         <a href="{% url 'edit_reservation' booking_id=booking.id %}">
-            <button type="button" class="btn btn-warning">Edit Reservation</button>
+            <button type="button" class="btn btn-warning">Change Details</button>
         </a>
     </div>
 </div>
@@ -52,7 +51,7 @@
     <div class="col-md-2">
         <form method="Post">
             {% csrf_token %}
-            <input type="submit" class="btn btn-danger" value="Delete Reservation">
+            <input type="submit" class="btn btn-danger" value="Cancel Reservation">
         </form>
     </div>
 </div>
