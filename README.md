@@ -124,6 +124,11 @@ This page displays the reservation form pre-populated using booking_id the user 
 This page displays information about the reservation the user chose to delete and gives them a chance to change their mind before definitively canceling their reservation.
 ![Screenshot of the delete reservation page past](https://myoctocat.com/assets/images/base-octocat.svg)
 
+## Footer
+The footer displays some key information about the restaurant. It has two sections. The first section is the 'Opening Hours' and the second section displays the address, contact information and social media links.
+![Screenshot of the delete reservation page past](https://myoctocat.com/assets/images/base-octocat.svg)
+
+
 <hr>
 <br>
 
