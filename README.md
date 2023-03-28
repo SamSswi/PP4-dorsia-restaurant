@@ -44,7 +44,7 @@ All my User Stories for this project with their acceptance criteria and tasks ca
 
 8. As a User I can View and Edit my bookings so that I can personally manage my reservations without contacting the restaurant
 
-9. As a User I can ** a front-end interface that meets accessibility guidelines and follows the principles of UX design** so that I can interact with the web application in an intuitive and easy-to-use way
+9. As a User I can access a front-end interface that meets accessibility guidelines and follows the principles of UX design so that I can interact with the web application in an intuitive and easy-to-use way
 
 10. As a User I can see the key information on the home page so that I won't have to search for it
 
@@ -126,7 +126,7 @@ This page displays information about the reservation the user chose to delete an
 
 ## Footer
 The footer displays some key information about the restaurant. It has two sections. The first section is the 'Opening Hours' and the second section displays the address, contact information and social media links.
-![Screenshot of the delete reservation page past](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot of the footer](https://myoctocat.com/assets/images/base-octocat.svg)
 
 
 <hr>
@@ -150,7 +150,7 @@ The footer displays some key information about the restaurant. It has two sectio
 # Testing
 ## Manual Testing
 ## Automated testing
-I used the Coverage library to keep track of how much code was covered by the test I've written. After running the coverage report, 98% of the Python code was covered by testing. The rest of the code and was the models. The non-Python code is tested mannually.
+I used the Coverage library to keep track of how much code was covered by the test I've written. After running the coverage report, 98% of the Python code is covered by the tests. The rest of the code was the models. The non-Python code has been tested manually.
 
 ## Bugs and fixes
 - After finishing the menu page I noticed the Wine cathegory was not displaying the list of items in the backend. The issue appeared to be the code looping through an inexistent meal cathegory. To fix this I put the right parameters to the Django loop.
