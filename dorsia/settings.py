@@ -60,6 +60,7 @@ LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
+# The message tags section is taken from Code Institute Codestar Sample Project
 # https://github.com/Code-Institute-Solutions/Django3blog/blob/master/11_messages/codestar/settings.py
 MESSAGE_TAGS = {
     messages.DEBUG: 'alert-info',
@@ -104,6 +105,7 @@ WSGI_APPLICATION = 'dorsia.wsgi.application'
 DATABASES = {
         'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
+# The solution for the if statement condition was found on Stackoverflow:
 # https://stackoverflow.com/questions/4650509/different-db-for-testing-in-django
 if 'test' in sys.argv:
     DATABASES = {

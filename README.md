@@ -170,3 +170,7 @@ I used the Coverage library to keep track of how much code was covered by the te
 # Deployment
 
 # Credits
+
+### settings.py file
+- [Code Institute Codestar Sample Project](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/11_messages/codestar/settings.py) for the MESSAGE_TAGS dictionary
+- [Stackoverflow](https://stackoverflow.com/questions/4650509/different-db-for-testing-in-django) for the condition of the if statement
