@@ -146,6 +146,17 @@ The footer displays some key information about the restaurant. It has two sectio
 - Balsamiq Wireframes - used to make the wireframes
 
 # Testing
+I used a combination of manual and automated testing to ensure the website functions properly.
+
+## Code Validation
+### HTML
+- I used [W3C Markup Validation Service](https://validator.w3.org/) to validate the HTML code and it passed with no errors.
+- I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate the CSS code and it passed with no errors.
+- I used [JS Hint](https://jshint.com/) to validate the JavaScript code and it passed with no errors.
+- For the Python code I have written code that conforms to the PEP8 style guide. However in the settings.py file, env.py file and in the models.py file, I had to use strings longer than the 79 characters limit.
+- I used the Lighthouse development tool to test the website pages for accesibility and the lowest score was 95%.
+![Lighthouse Report](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680129131/Dorsia%20PP4%20Images/Readme/lighthouse_test_c0hogv.jpg)
+
 ## Manual Testing
 I tested this project manually. Especially the JavaScript functionality.
 [Here is the link to the MANUAL_TESTING file](/MANUAL_TESTING.md)
