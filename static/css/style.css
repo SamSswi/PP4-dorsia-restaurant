@@ -26,9 +26,7 @@ header {
 
 nav {
     font-family: 'Montserrat', sans-serif;
-    background-color: #6E7178
-        /* #8D949E #6D7278 #6E7178 #55585E #3C3E44*/
-    ;
+    background-color: #6E7178;
     position: fixed;
 }
 
@@ -118,7 +116,6 @@ nav span {
 
 #btn-container a {
     padding: 5px;
-    /* border-bottom: 1px solid #E3DAC9; */
     color: #E3DAC9;
     font-size: 1.5rem;
     font-family: "Montserrat", sans-serif;
@@ -138,7 +135,6 @@ nav span {
 
 #about-us {
     background-color: #E3DAC9;
-    /* width: 100%; */
     padding: 2.5rem 2rem 1rem;
     justify-content: center;
     font-size: 1.4rem;
@@ -291,7 +287,7 @@ form button {
     align-items: center;
 }
 
-#del-change-btn{
+#del-change-btn {
     color: white;
 }
 
@@ -382,14 +378,14 @@ footer a {
         font-size: 2rem;
     }
 
-    /* Delete reservation */  
+    /* Delete reservation */
     .edit-btn {
         text-align: left;
         padding-top: 1rem;
     }
-    
+
     /* Footer */
-    
+
     footer table td {
         font-size: smaller;
     }
@@ -444,7 +440,7 @@ footer a {
     }
 
     /* Delete a reservation */
-    #del-change-btn{
+    #del-change-btn {
         margin-top: 1rem;
     }
 }
@@ -492,13 +488,13 @@ footer a {
         padding: 0.5rem;
         font-size: 0.8rem;
     }
-    
+
     #mng-res-col .action-btns {
         background-color: #E3DAC9;
         justify-content: center;
         padding-bottom: 2rem;
     }
-    
+
     #mng-res-col a {
         margin: 0 2rem;
     }

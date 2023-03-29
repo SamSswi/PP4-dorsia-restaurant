@@ -131,7 +131,7 @@ def delete_reservation(request, booking_id):
         booking.delete()
         messages.success(
             request,
-            'You have successfully deleted the reservation')
+            'You have successfully cancelled the reservation')
         return redirect('manage_reservations')
     context = {'booking': booking}
     return render(request, 'delete_reservation.html', context)
