@@ -7,8 +7,9 @@
 </div>
 <div class="row" id="btn-container">
     <div class="col-md-4">
-        <a href="{% url 'menu' %}"><button type="button" class="btn" id="menu-btn">Menu</button></a>
-        <a href="{% url 'reservation' %}"><button type="button" class="btn" id="make-a-reservation-btn">Make a Reservation</button></a>
+        <a href="{% url 'menu' %}" class="btn" id="menu-btn">Menu</a>
+        <a href="{% url 'reservation' %}" class="btn" id="make-a-reservation-btn">Make a
+            Reservation</a>
     </div>
 </div>
 <div class="row" id="about-us">
@@ -51,4 +52,6 @@
         </div>
 
     </div>
-    {% endblock content %}
+</div>
+
+{% endblock content %}

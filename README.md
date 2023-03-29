@@ -127,8 +127,6 @@ This page displays information about the reservation the user chose to delete an
 ## Footer
 The footer displays some key information about the restaurant. It has two sections. The first section is the 'Opening Hours' and the second section displays the address, contact information and social media links.
 ![Screenshot of the footer](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680049804/Dorsia%20PP4%20Images/Readme/footer_vaqcp7.jpg)
-
-
 <hr>
 <br>
 

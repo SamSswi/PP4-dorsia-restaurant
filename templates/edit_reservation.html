@@ -39,10 +39,10 @@
                         <label for="number_of_guests">Number of guests*:&nbsp;</label>
                     </td>
                     <td>
-                        <select name="number_of_guests" id="number_of_guests" value="{{booking_to_edit.number_of_guests}}>
+                        <select name="number_of_guests" id="number_of_guests">
                             {% for number in max_guest_num %}
-                            <option value=" {{number}}" {% if number == booking_to_edit.number_of_guests %} selected
-                            {% endif %}>{{number}}</option>
+                            <option value="{{number}}" {% if number == booking_to_edit.number_of_guests %} selected
+                                {% endif %}>{{number}}</option>
                             {% endfor %}
                         </select>
                     </td>
@@ -60,8 +60,8 @@
                         <label for="booking-date">Date Of The Reservation*:&nbsp;</label>
                     </td>
                     <td>
-                        <input type="date" name="booking-date" id="booking-date" min="{{ min_date }}" required
-                            pattern="\d{4}-\d{2}-\d{2}" value="{{ booking_date_str }}">
+                        <input type="date" name="booking-date" id="booking-date" required
+                            value="{{ booking_date_str }}">
                     </td>
                 </tr>
                 <tr>
@@ -84,8 +84,7 @@
 
 <!-- Modal -->
 <!-- https://getbootstrap.com/docs/4.0/components/modal/ -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">

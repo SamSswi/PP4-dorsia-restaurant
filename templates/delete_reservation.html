@@ -3,15 +3,11 @@
 <h3 class="title"> You have decided to cancel this reservation. Please read carefully the details of your reservation
     before taking a decisive action on it. </h3>
 <div class="row btn-row">
-    <div class="col-md-2">
-        <a href="{% url 'manage_reservations' %}">
-            <button type="button" class="btn btn-secondary">Take me back</button>
-        </a>
+    <div class="col-md-3 back-btn">
+        <button type="button" class="btn btn-secondary" onclick="history.go(-1)">Take me back</button>
     </div>
-    <div class="col-md-2 edit-btn">
-        <a href="{% url 'edit_reservation' booking_id=booking.id %}">
-            <button type="button" class="btn btn-warning">Change Details</button>
-        </a>
+    <div class="col-md-3 edit-btn">
+        <a href="{% url 'edit_reservation' booking_id=booking.id %}" class="action-btn change-details" id="del-edit-btn">Change details</a>
     </div>
 </div>
 <div class="row" id="del-reservation-row">

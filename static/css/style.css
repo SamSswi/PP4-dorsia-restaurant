@@ -116,7 +116,7 @@ nav span {
     justify-content: center;
 }
 
-#btn-container button {
+#btn-container a {
     padding: 5px;
     /* border-bottom: 1px solid #E3DAC9; */
     color: #E3DAC9;
@@ -124,7 +124,7 @@ nav span {
     font-family: "Montserrat", sans-serif;
 }
 
-#btn-container button:hover {
+#btn-container a:hover {
     border: 1px solid #E3DAC9;
 }
 
@@ -268,6 +268,30 @@ form button {
 
 #mng-res-col a {
     margin: 0 2rem;
+    padding: 0.5rem;
+    border-radius: 7px;
+    text-decoration: none;
+    color: white;
+}
+
+.delete-btn {
+    background-color: rgb(163, 25, 25);
+    border:rgb(163, 25, 25) solid 1px;
+}
+
+.delete-btn:hover {
+    background-color: rgb(99, 21, 21);
+    border:rgb(99, 21, 21) solid 1px;
+}
+
+.change-details {
+    background-color: rgb(206, 175, 3);
+    border:rgb(206, 175, 3) solid 1px;
+}
+
+.change-details:hover {
+    background-color: rgb(155, 132, 0);
+    border:rgb(155, 132, 0) solid 1px;
 }
 
 /* Delete reservation */
@@ -284,10 +308,23 @@ form button {
     background-color: #E3DAC9;
     justify-content: center;
     padding: 0 2rem;
+    align-items: center;
 }
 
 .edit-btn {
-    text-align: right;
+    margin: 0 2rem;
+}
+
+#del-edit-btn {
+    padding: 0.4rem;
+    border-radius: 7px;
+    text-decoration: none;
+    color: white;
+}
+
+#del-edit-btn:hover {
+    background-color: rgb(155, 132, 0);
+    border:rgb(155, 132, 0) solid 1px;
 }
 
 #delete-btn-row {
@@ -334,8 +371,9 @@ footer table {
     border-color: #E3DAC9 !important;
 }
 
-footer table th {
+footer table .th {
     border: none;
+    font-weight: bold;
 }
 
 footer a {
@@ -402,7 +440,7 @@ footer a {
         font-size: 4rem;
     }
 
-    #btn-container button {
+    #btn-container a {
         padding: 2px;
         font-size: 1rem;
     }

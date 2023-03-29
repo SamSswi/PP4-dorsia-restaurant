@@ -55,8 +55,7 @@
                         <label for="booking-date">Date Of The Reservation*:&nbsp;</label>
                     </td>
                     <td>
-                        <input type="date" name="booking-date" id="booking-date" min="{{ min_date }}" required
-                            pattern="\d{4}-\d{2}-\d{2}">
+                        <input type="date" name="booking-date" id="booking-date" required>
                     </td>
                 </tr>
                 <tr>
@@ -76,11 +75,9 @@
         </form>
     </div>
 </div>
-
 <!-- Modal -->
 <!-- https://getbootstrap.com/docs/4.0/components/modal/ -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">

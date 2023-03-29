@@ -3,7 +3,8 @@
 <div class="row top-row">
     <div class="col-md-8 col-sm-10 col-xs-12 col-lg-6" id="mng-res-col">
         <h2 class="title"> You are now managing the bookings made by the user: {{ username }} </h2>
-        <p>Please take notice you cannot edit reservations that are already expired or due tomorrow ({{min_date}}) or earlier</p>
+        <p>Please take notice you cannot edit reservations that are already expired or due tomorrow ({{min_date}}) or
+            earlier</p>
         <p>For emergencies or last minute cancellations call: +1 555-555-5555</p>
         <!-- https://getbootstrap.com/docs/5.3/components/accordion/#how-it-works -->
         <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -52,12 +53,8 @@
                     </div>
                     <div class="row action-btns">
                         <div class="col">
-                            <a href="{% url 'edit_reservation' booking_id=booking.id %}">
-                                <button type="button" class="btn btn-warning action-btn">Change details</button>
-                            </a>
-                            <a href="{% url 'delete_reservation' booking_id=booking.id %}">
-                                <button type="button" class="btn btn-danger action-btn" id="delete-btn">Cancel Reservation</button>
-                            </a>
+                            <a href="{% url 'edit_reservation' booking_id=booking.id %}" class="action-btn change-details">Change details</a>
+                            <a href="{% url 'delete_reservation' booking_id=booking.id %}" class="action-btn delete-btn">Cancel Reservation</a>
                         </div>
                     </div>
                 </div>
