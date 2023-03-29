@@ -112,17 +112,17 @@ The page conatins a form the user can fill. The fields are not pre-populated.
 ## Manage Reservations
 The link to this page is displayed in the navbar to the logged in users. This page shows the user a list of the reservations they have previously made, and offers them the opportunity to Edit or Delete the reservations that have not expired or are not less than one day away from the current date.
 This reservation is made for a future date so the user can still edit it:
-![Screenshot of the make a reservation page future](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680049252/Dorsia%20PP4%20Images/Readme/manage_reservations_page_future_ujskga.jpg)
+![Screenshot of the manage reservations page future](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680049252/Dorsia%20PP4%20Images/Readme/manage_reservations_page_future_ujskga.jpg)
 The following reservation cannot be edited anymore by the user. In case the user wants to modify it or cancel it, they should contact the restaurant.
-![Screenshot of the make a reservation page past](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680049446/Dorsia%20PP4%20Images/Readme/manage_reservations_page_past_oua9j0.jpg)
+![Screenshot of the manage reservations page past](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680049446/Dorsia%20PP4%20Images/Readme/manage_reservations_page_past_oua9j0.jpg)
 
 ## Edit Reservation
 This page displays the reservation form pre-populated using booking_id the user is able to change any piece of information they want and submit it. After submitting the form they're redirected to the Manage Reservations page where they can view the updated reservation.
-![Screenshot of the edit reservation page past](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680049598/Dorsia%20PP4%20Images/Readme/edit_reservation_page_oyyxzu.jpg)
+![Screenshot of the edit reservation page](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680049598/Dorsia%20PP4%20Images/Readme/edit_reservation_page_oyyxzu.jpg)
 
 ## Delete Reservation
 This page displays information about the reservation the user chose to delete and gives them a chance to change their mind before definitively canceling their reservation.
-![Screenshot of the delete reservation page past](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680049724/Dorsia%20PP4%20Images/Readme/delete_reservation_page_hwlezy.jpg)
+![Screenshot of the delete reservation page](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680049724/Dorsia%20PP4%20Images/Readme/delete_reservation_page_hwlezy.jpg)
 
 ## Footer
 The footer displays some key information about the restaurant. It has two sections. The first section is the 'Opening Hours' and the second section displays the address, contact information and social media links.
@@ -149,6 +149,8 @@ The footer displays some key information about the restaurant. It has two sectio
 
 # Testing
 ## Manual Testing
+I tested this project manually. Especially the JavaScript functionality.
+[Here is the link to the MANUAL_TESTING file](/MANUAL_TESTING.md)
 ## Automated testing
 I used the Coverage library to keep track of how much code was covered by the test I've written. After running the coverage report, 98% of the Python code is covered by the tests. The rest of the code was the models. The non-Python code has been tested manually.
 

@@ -36,7 +36,7 @@ In the backend, the admin can create, edit and delete the menu items primarily b
 
 The navbar displays different links depending on the status of the user. If the user is not logged in, they are presented with the options to Log In or Register.
 
-On the Log In page, the users are given the opportunity to register if they're not registered yet. Only logged-in users can make reservations.
+On the Log In page, the users are given the opportunity to register if they're not registered yet. Only logged-in users can make reservations. Whenever the registers, logs in or logs out, they're shown a success message to confirm their action succeeded.
 
 ## Epic 4 - Display the menu
 
@@ -58,12 +58,22 @@ From the Reservation page the user can fill a form with the desired information 
 
 Users that are not logged-in, cannot access the Reservation page but are redirected to the Log In page instead.
 
-A logged-in user can access the Manage Reservations page and edit or delete a reservation.
+A logged-in user can access the Manage Reservations page and edit or delete a reservation. Whenever the user executes one of these functionalities, they're shown a success message to confirm their action succeeded.
 <br>
 <hr>
 
 # JavaScript Testing
-I have written a few JavaScript functions to handle changes when the user selects a booking date and to remove the edit and delete functionality from the Manage Reservations pages for the reservations that have expired or are happening too soon to be relevant to edit them.
+I have written a few JavaScript functions to handle changes when the user selects a booking date and to remove the edit and delete functionality from the Manage Reservations pages for the reservations that have expired or are happening too soon to be relevant to edit them. This prevents the user from editing an expired reservation or a reservation happening too soon to be modified.
+![Screenshot of the manage reservations page past](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680049446/Dorsia%20PP4%20Images/Readme/manage_reservations_page_past_oua9j0.jpg)
+
+Another instance where I used JavaScript was to trigger a modal when an user enters a date from the past or too early in the future to be relevant.
+![Screenshot of the modal](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680051014/Dorsia%20PP4%20Images/Readme/wrong_date_modal_tnt8vf.jpg)
+
+The last task performed by the script is disabling the 'Submit' button whenever the user enters a wrong date, and keeping the button 'disabled' until the user enters a valid date. This prevents the user from submitting an invalid form.
+![Screenshot of the submit button wrong time](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680051136/Dorsia%20PP4%20Images/Readme/submit_button_bad_date_gc6muq.jpg)
+
+[Back to the main README file](/README.md)
+
 
 
 
