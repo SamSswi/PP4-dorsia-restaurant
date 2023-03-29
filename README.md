@@ -1,7 +1,7 @@
 # Dorsia Restaurant
 ![Screenshot of a am I responsive](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680042938/Dorsia%20PP4%20Images/Readme/am_i_responsive_ggcsod.jpg)
 
-[Live application can be found here](https://pages.github.com/)
+[Live application can be found here](https://pp4-dorsia-restaurant.herokuapp.com/)
 
 This is a full-stack framework project. It was built using Django, Python, JavaScript, Bootstrap, HTML and CSS. This is a restaurant website featuring the menu of the Dorsia Restaurant from Bret Easton Ellis' book [American Psycho](https://en.wikipedia.org/wiki/American_Psycho). The website is meant to display the menu to the customers and allow them to make,edit and delete their own reservations.
 
@@ -89,44 +89,44 @@ The colors I chose for this website are a shade of bone (##E3DAC9) and a warm gr
 The navigation bar contains links to all the relevant active pages. The Edit Reservation and Delete Reservation pages can be accessed from the Manage Reservations page, as they require a booking_id to know what reservation to act upon.
 
 If the user is logged in, the right side of the Navigation Bar displays the following links: "Manage Reservations" and "Log Out".
-![Screenshot of the navigation bar initial](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot of the navigation bar initial](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680047949/Dorsia%20PP4%20Images/Readme/navigation_bar_logged_out_buvbgi.jpg)
 If the user is not logged in, then the options on the right side of the Navigation bar are to log in or register.
-![Screenshot of the navigation bar logged-in user](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot of the navigation bar logged-in user](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680047949/Dorsia%20PP4%20Images/Readme/navigation_bar_logged-in_ham8ku.jpg)
 The navigation bar is responsive and collapses on smaller screens.
-![Screenshot of the navigation bar collapsed](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot of the navigation bar collapsed](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680047949/Dorsia%20PP4%20Images/Readme/navigation_bar_collapsed_ow4nar.jpg)
 
 
 ## Home page
 The home page features a landing area (where the name "Dorsia" is displayed), a bar with buttons allowing the user to access the menu or make a reservation, and an About Us section with a brief description of the restaurant.
-![Screenshot of the home page](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot of the home page](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680048603/Dorsia%20PP4%20Images/Readme/home_page_tbg2b3.jpg)
 
 ## Menu
 The menu page displays separately the sections of the menu. Each item has a name and a description. The menu items can be added, edited or deleted by the admin in the backend.
-![Screenshot of the menu page](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot of the menu page](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680048735/Dorsia%20PP4%20Images/Readme/menu_page_frruof.jpg)
 
 ## Make a Reservation
 This page can be accessed only by the logged-in users. The visitors who are not registered yet, are redirected to the Sign Up page.
 The page conatins a form the user can fill. The fields are not pre-populated.
-![Screenshot of the make a reservation page](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot of the make a reservation page](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680048862/Dorsia%20PP4%20Images/Readme/make_a_reservation_page_vzrctz.jpg)
 
 ## Manage Reservations
 The link to this page is displayed in the navbar to the logged in users. This page shows the user a list of the reservations they have previously made, and offers them the opportunity to Edit or Delete the reservations that have not expired or are not less than one day away from the current date.
 This reservation is made for a future date so the user can still edit it:
-![Screenshot of the make a reservation page future](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot of the make a reservation page future](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680049252/Dorsia%20PP4%20Images/Readme/manage_reservations_page_future_ujskga.jpg)
 The following reservation cannot be edited anymore by the user. In case the user wants to modify it or cancel it, they should contact the restaurant.
-![Screenshot of the make a reservation page past](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot of the make a reservation page past](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680049446/Dorsia%20PP4%20Images/Readme/manage_reservations_page_past_oua9j0.jpg)
 
 ## Edit Reservation
 This page displays the reservation form pre-populated using booking_id the user is able to change any piece of information they want and submit it. After submitting the form they're redirected to the Manage Reservations page where they can view the updated reservation.
-![Screenshot of the edit reservation page past](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot of the edit reservation page past](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680049598/Dorsia%20PP4%20Images/Readme/edit_reservation_page_oyyxzu.jpg)
 
 ## Delete Reservation
 This page displays information about the reservation the user chose to delete and gives them a chance to change their mind before definitively canceling their reservation.
-![Screenshot of the delete reservation page past](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot of the delete reservation page past](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680049724/Dorsia%20PP4%20Images/Readme/delete_reservation_page_hwlezy.jpg)
 
 ## Footer
 The footer displays some key information about the restaurant. It has two sections. The first section is the 'Opening Hours' and the second section displays the address, contact information and social media links.
-![Screenshot of the footer](https://myoctocat.com/assets/images/base-octocat.svg)
+![Screenshot of the footer](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680049804/Dorsia%20PP4%20Images/Readme/footer_vaqcp7.jpg)
 
 
 <hr>
