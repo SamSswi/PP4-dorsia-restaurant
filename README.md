@@ -178,3 +178,5 @@ I used the Coverage library to keep track of how much code was covered by the te
 ### admin.py file 
 - [Code Institute Codestar Sample Project](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/05_building_the_admin_site/blog/admin.py) for the list_filter variable in the BookingAdmin class and the confirm_booking method.
 
+### models.py
+- [Code Institute Codestar Sample Project](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/05_building_the_admin_site/blog/models.py) for the confirmed variable in the Booking model.

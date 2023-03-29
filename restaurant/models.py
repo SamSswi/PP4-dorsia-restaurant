@@ -30,6 +30,8 @@ class Booking(models.Model):
     booking_date = models.DateField()
     time = models.TimeField()
     comment = models.TextField(default='')
+    # The list confirmed was taken from
+    # the Code Institute Codestar project
     # https://github.com/Code-Institute-Solutions/Django3blog/blob/master/05_building_the_admin_site/blog/models.py
     confirmed = models.BooleanField(default=False)
 
