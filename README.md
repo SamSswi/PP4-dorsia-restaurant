@@ -172,6 +172,27 @@ I used the Coverage library to keep track of how much code was covered by the te
 - **Submit Button Bug** - On the Reservation page, the submit button is 'disabled' by default to prevent the users from submitting a form without a date selected. It is only enabled when the user selects a valid date. I wanted to use the same 'form' but pre-populated on the Edit Reservation page. But when I linked the same script to it, the submit button was 'disabled' by default, and the user had to select the date again, even if they didn't want to change it, only to activate the submit button. To fix it, I added a data attribute to the submit button of both pages so the script can differentiate between them.
 
 # Deployment
+To deploy my project I followed the following steps:
+
+## Initial deployment
+- Installed Django and supporting libraries (gunicorn, psycopg2, cloudinary), created requirements file, created the project and the app.
+- Created an external database in ElephantSQL
+- Created a Heroku app
+- Linked the Database to Heroku and env.py
+- Added the Database and Secret key to settings.py
+- Create a Cloudinary static and media files database
+- Link the Cloudinary database to env.py and Heroku
+- In settings.py told Django to store the static files in Cloudinary
+- Added Heroku to allowed hosts in settings.py
+- Created the media, static and templates folders
+- Created a Procfile
+- Deploy to Heroku the main branch
+
+## Final deployment
+- Set the DEBUG flag to False in settings.py
+- Added X_FRAME_OPTIONS = 'SAMEORIGIN' to settings.py
+- Removed DISABLE_COLLECTSTATIC environment variable
+
 
 # Credits
 
