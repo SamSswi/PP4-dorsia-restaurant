@@ -52,6 +52,7 @@ nav span {
     color: #E3DAC9;
 }
 
+/* The .icon::before code used to change the default hamburger icon was copied from Font Awesome */
 /* https://fontawesome.com/v5/docs/web/advanced/css-pseudo-elements */
 .icon::before {
     display: inline-block;
@@ -390,7 +391,6 @@ footer a {
         font-size: smaller;
     }
 }
-
 
 @media (max-width: 600px) {
 

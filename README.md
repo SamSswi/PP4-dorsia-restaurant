@@ -192,3 +192,7 @@ I used the Coverage library to keep track of how much code was covered by the te
 - [Stack Overflow](https://stackoverflow.com/questions/12615154/how-to-get-the-currently-logged-in-users-user-id-in-django) - the solution to get a user's id
 - [Stack Overflow](https://stackoverflow.com/questions/1506901/cleanest-and-most-pythonic-way-to-get-tomorrows-date) - the solution to calculate the date tomorrow
 - [Stack Overflow](https://stackoverflow.com/questions/14619494/how-to-understand-strptime-vs-strftime#:~:text=strptime%20is%20short%20for%20%22parse,seen%20strptime%20used%20since%20DateTime.) - the solution to convert a date to string using .strftime() method
+
+### style.css
+- [Font Awesome Advanced](https://fontawesome.com/v5/docs/web/advanced/css-pseudo-elements) - the code used to change the default hamburger icon
+- 
