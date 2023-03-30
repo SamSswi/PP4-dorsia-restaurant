@@ -67,9 +67,11 @@ I have written a few JavaScript functions to handle changes when the user select
 ![Screenshot of the manage reservations page past](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680049446/Dorsia%20PP4%20Images/Readme/manage_reservations_page_past_oua9j0.jpg)
 
 Another instance where I used JavaScript was to trigger a modal when an user enters a date from the past or too early in the future to be relevant.
+
 ![Screenshot of the modal](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680051014/Dorsia%20PP4%20Images/Readme/wrong_date_modal_tnt8vf.jpg)
 
 The last task performed by the script is disabling the 'Submit' button whenever the user enters a wrong date, and keeping the button 'disabled' until the user enters a valid date. This prevents the user from submitting an invalid form.
+
 ![Screenshot of the submit button wrong time](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680051136/Dorsia%20PP4%20Images/Readme/submit_button_bad_date_gc6muq.jpg)
 
 [Back to the main README file](/README.md)

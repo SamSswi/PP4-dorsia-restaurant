@@ -90,9 +90,12 @@ The navigation bar contains links to all the relevant active pages. The Edit Res
 
 If the user is logged in, the right side of the Navigation Bar displays the following links: "Manage Reservations" and "Log Out".
 ![Screenshot of the navigation bar initial](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680047949/Dorsia%20PP4%20Images/Readme/navigation_bar_logged_out_buvbgi.jpg)
+
 If the user is not logged in, then the options on the right side of the Navigation bar are to log in or register.
 ![Screenshot of the navigation bar logged-in user](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680047949/Dorsia%20PP4%20Images/Readme/navigation_bar_logged-in_ham8ku.jpg)
+
 The navigation bar is responsive and collapses on smaller screens.
+
 ![Screenshot of the navigation bar collapsed](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680047949/Dorsia%20PP4%20Images/Readme/navigation_bar_collapsed_ow4nar.jpg)
 
 
@@ -118,6 +121,7 @@ The following reservation cannot be edited anymore by the user. In case the user
 
 ## Edit Reservation
 This page displays the reservation form pre-populated using booking_id the user is able to change any piece of information they want and submit it. After submitting the form they're redirected to the Manage Reservations page where they can view the updated reservation.
+
 ![Screenshot of the edit reservation page](https://res.cloudinary.com/dclq2ghzy/image/upload/v1680049598/Dorsia%20PP4%20Images/Readme/edit_reservation_page_oyyxzu.jpg)
 
 ## Delete Reservation
@@ -207,7 +211,7 @@ I used the Coverage library to keep track of how much code was covered by the te
 
 ## Templates
 - [w3schools](https://www.w3schools.com/jsref/met_his_go.asp) - the "Go back" button functionality
-- [Bootsrap](https://getbootstrap.com/) - Navigation Bar, Striped Tables, Modals, Accordions
+- [Bootsrap](https://getbootstrap.com/) - Navigation Bar, Striped Tables, Modals, Accordions, Buttons
 
 ### base.html
 - [Code Institute Codestar Sample Project](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/11_messages/templates/base.html) - alert messages HTML and Script.
