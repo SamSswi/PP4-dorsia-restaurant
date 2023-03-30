@@ -207,7 +207,7 @@ I used the Coverage library to keep track of how much code was covered by the te
 
 ## Templates
 - [w3schools](https://www.w3schools.com/jsref/met_his_go.asp) - the "Go back" button functionality
-- [Bootsrap](https://getbootstrap.com/) - Navigation Bar, Striped Tables, Modals
+- [Bootsrap](https://getbootstrap.com/) - Navigation Bar, Striped Tables, Modals, Accordions
 
 ### base.html
 - [Code Institute Codestar Sample Project](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/11_messages/templates/base.html) - alert messages HTML and Script.

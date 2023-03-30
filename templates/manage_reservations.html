@@ -6,6 +6,7 @@
         <p>Please take notice you cannot edit reservations that are already expired or due tomorrow ({{min_date}}) or
             earlier</p>
         <p>For emergencies or last minute cancellations call: +1 555-555-5555</p>
+        <!-- The accordion code was taken from Bootstrap -->
         <!-- https://getbootstrap.com/docs/5.3/components/accordion/#how-it-works -->
         <div class="accordion accordion-flush" id="accordionFlushExample">
             {% for booking in bookings %}
@@ -21,6 +22,7 @@
                 <div id="flush-collapse-{{ booking.id }}" class="accordion-collapse collapse"
                     aria-labelledby="flush-heading-{{ booking.id }}" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
+                        <!-- The striped table is take from Bootstrap -->
                         <!-- https://getbootstrap.com/docs/4.0/content/tables/ -->
                         <table class="table table-striped">
                             <tbody>
@@ -53,8 +55,10 @@
                     </div>
                     <div class="row action-btns">
                         <div class="col">
-                            <a href="{% url 'edit_reservation' booking_id=booking.id %}" class="btn btn-warning">Change details</a>
-                            <a href="{% url 'delete_reservation' booking_id=booking.id %}" class="btn btn-danger">Cancel Reservation</a>
+                            <a href="{% url 'edit_reservation' booking_id=booking.id %}" class="btn btn-warning">Change
+                                details</a>
+                            <a href="{% url 'delete_reservation' booking_id=booking.id %}" class="btn btn-danger">Cancel
+                                Reservation</a>
                         </div>
                     </div>
                 </div>
