@@ -195,4 +195,6 @@ I used the Coverage library to keep track of how much code was covered by the te
 
 ### style.css
 - [Font Awesome Advanced](https://fontawesome.com/v5/docs/web/advanced/css-pseudo-elements) - the code used to change the default hamburger icon
-- 
+
+### manage_reservations.js
+- [Cloudnweb](https://cloudnweb.dev/2020/08/3-efficient-ways-to-get-tomorrow-date-using-javascript/) - the process of getting tomorrow's date
