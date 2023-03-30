@@ -205,3 +205,10 @@ I used the Coverage library to keep track of how much code was covered by the te
 - [Free Code Camp](https://www.freecodecamp.org/news/javascript-date-comparison-how-to-compare-dates-in-js/#:~:text=To%20handle%20equality%20comparison%2C%20we,getMonth()%20and%20getYear()%20.) - the solution to creating a date out of year, month, day
 - [Cloudnweb](https://cloudnweb.dev/2020/08/3-efficient-ways-to-get-tomorrow-date-using-javascript/) - the process of getting tomorrow's date
 
+## Templates
+- [w3schools](https://www.w3schools.com/jsref/met_his_go.asp) - the "Go back" button functionality
+- [Bootsrap](https://getbootstrap.com/) - Navigation Bar, 
+
+### base.html
+- [Code Institute Codestar Sample Project](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/11_messages/templates/base.html) - alert messages HTML and Script.
+

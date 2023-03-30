@@ -44,6 +44,7 @@
             </li>
           </ul>
           <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+            <!-- The idea to use an if conditional is taken from Code Institute's Codestar Sample Project -->
             <!-- https://github.com/Code-Institute-Solutions/django-blog-starter-files/blob/master/templates/base.html -->
             {% if user.is_authenticated %}
             <li class="nav-item">
@@ -64,6 +65,7 @@
         </div>
       </div>
     </nav>
+    <!-- The msg-container div was copied from Code Institute's Codestar Project -->
     <!-- https://github.com/Code-Institute-Solutions/Django3blog/blob/master/11_messages/templates/base.html -->
     <div class="container msg-container">
       <div class="row">
@@ -175,6 +177,7 @@
       </div>
     </div>
   </footer>
+  <!-- The alert messages script was copied from Code Institute Codestar Sample Project -->
   <!-- https://github.com/Code-Institute-Solutions/Django3blog/blob/master/11_messages/templates/base.html -->
   <script>
     setTimeout(function () {
