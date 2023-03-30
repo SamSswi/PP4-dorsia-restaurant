@@ -1,7 +1,10 @@
+# The login_required import line was
+# taken from the djangoproject's documentation:
 # https://docs.djangoproject.com/en/4.1/topics/auth/default/#the-login-required-decorator/
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, HttpResponse, redirect
+# The following imports were inspired from Code Institute's Codestar Project
 # https://github.com/Code-Institute-Solutions/Django3blog/tree/master/05_building_the_admin_site
+from django.shortcuts import render, HttpResponse, redirect
 from django.views import generic, View
 from .models import Meal, Drink, Booking
 from datetime import date, timedelta, time, datetime
@@ -19,6 +22,9 @@ def menu(request):
     return render(request, 'menu.html', context)
 
 
+# The login_required decorator was
+# taken from the djangoproject's documentation:
+# https://docs.djangoproject.com/en/4.1/topics/auth/default/#the-login-required-decorator/
 @login_required
 def reservation(request):
     if request.method == 'POST':
@@ -29,13 +35,17 @@ def reservation(request):
         booking_date_string = request.POST.get('booking-date')
         time_string = request.POST.get('booking-time')
         comment = request.POST.get('comment')
+        # The strptime() method was found on Programiz
         # https://www.programiz.com/python-programming/datetime/strptime
-        # https://www.geeksforgeeks.org/how-to-convert-datetime-to-date-
-        # in-python/ .date() method
+        # The usage of .date() method to extract a date
+        # was taken from Geeks For Geeks
+        # https://www.geeksforgeeks.org/how-to-convert-datetime-to-date-in-python/
         booking_date = datetime.strptime(
             booking_date_string, '%Y-%m-%d').date()
         time = datetime.strptime(time_string, '%I:%M %p').time()
         Booking.objects.create(
+            # The solution to retrieving the user id
+            # was found on Stack Overflow
             # https://stackoverflow.com/questions/12615154/how-to-get-the-currently-logged-in-users-user-id-in-django
             customer_id=request.user,
             booking_full_name=booking_full_name,
@@ -54,6 +64,8 @@ def reservation(request):
         '7:00 pm', '8:00 pm', '9:00 pm', '10:00 pm',
         '11:00 pm', '12:00 am', '1:00 am', '2:00 am',
         '3:00 am', '4:00 am')
+    # The solution to calculating the date for tomorrow
+    # was found on Stack Overflow
     # https://stackoverflow.com/questions/1506901/cleanest-and-most-pythonic-way-to-get-tomorrows-date
     min_date = date.today() + timedelta(days=1)
     context = {
@@ -63,11 +75,16 @@ def reservation(request):
     return render(request, 'reservation.html', context)
 
 
+# The login_required decorator was
+# taken from the djangoproject's documentation:
+# https://docs.djangoproject.com/en/4.1/topics/auth/default/#the-login-required-decorator/
 @login_required
 def manage_reservations(request):
     username = request.user
     bookings = Booking.objects.filter(
         customer_id=username).order_by('-booking_date')
+    # The solution to calculating the date for tomorrow
+    # was found on Stack Overflow
     # https://stackoverflow.com/questions/1506901/cleanest-and-most-pythonic-way-to-get-tomorrows-date
     min_date = date.today() + timedelta(days=1)
     context = {
@@ -75,9 +92,14 @@ def manage_reservations(request):
     return render(request, 'manage_reservations.html', context)
 
 
+# The login_required decorator was
+# taken from the djangoproject's documentation:
+# https://docs.djangoproject.com/en/4.1/topics/auth/default/#the-login-required-decorator/
 @login_required
 def edit_reservation(request, booking_id):
     booking_to_edit = Booking.objects.get(id=booking_id)
+    # The solution to convert a date to string using .strftime() method
+    # was found on Stack Overflow
     # https://stackoverflow.com/questions/14619494/how-to-understand-strptime-vs-strftime#:~:text=strptime%20is%20short%20for%20%22parse,seen%20strptime%20used%20since%20DateTime.
     booking_date_str = booking_to_edit.booking_date.strftime('%Y-%m-%d')
     time_str_am = booking_to_edit.time.strftime('%-I:%M %p').replace(
@@ -124,6 +146,9 @@ def edit_reservation(request, booking_id):
     return render(request, 'edit_reservation.html', context)
 
 
+# The login_required decorator was
+# taken from the djangoproject's documentation:
+# https://docs.djangoproject.com/en/4.1/topics/auth/default/#the-login-required-decorator/
 @login_required
 def delete_reservation(request, booking_id):
     booking = Booking.objects.get(id=booking_id)

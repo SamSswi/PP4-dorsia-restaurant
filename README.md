@@ -184,3 +184,11 @@ I used the Coverage library to keep track of how much code was covered by the te
 ### test_views.py
 - [Stackoverflow](https://stackoverflow.com/questions/36940384/how-do-i-setup-a-unit-test-user-for-django-app-the-unit-test-cant-login) - the solution on how to create a test user
 - [Code Institute Hello Django Sample Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/dc049b343a9b474f8d75822c5fda1582/5666926980b74689b37a0d5da3cec510/) - the home page test function
+
+### views.py
+- [djangoproject](https://docs.djangoproject.com/en/4.1/topics/auth/default/#the-login-required-decorator/) - @login_required decorator\
+- [Programiz](https://www.programiz.com/python-programming/datetime/strptime) - strptime() method
+- [Geeks For Geeks](https://www.geeksforgeeks.org/how-to-convert-datetime-to-date-in-python/) - using of the .date() method to extract the date
+- [Stack Overflow](https://stackoverflow.com/questions/12615154/how-to-get-the-currently-logged-in-users-user-id-in-django) - the solution to get a user's id
+- [Stack Overflow](https://stackoverflow.com/questions/1506901/cleanest-and-most-pythonic-way-to-get-tomorrows-date) - the solution to calculate the date tomorrow
+- [Stack Overflow](https://stackoverflow.com/questions/14619494/how-to-understand-strptime-vs-strftime#:~:text=strptime%20is%20short%20for%20%22parse,seen%20strptime%20used%20since%20DateTime.) - the solution to convert a date to string using .strftime() method
