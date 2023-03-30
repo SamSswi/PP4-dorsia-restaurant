@@ -198,3 +198,10 @@ I used the Coverage library to keep track of how much code was covered by the te
 
 ### manage_reservations.js
 - [Cloudnweb](https://cloudnweb.dev/2020/08/3-efficient-ways-to-get-tomorrow-date-using-javascript/) - the process of getting tomorrow's date
+
+### reservation.js
+- [Bootstrap documentation](https://getbootstrap.com/docs/5.0/components/modal/) - the solution to create a modal with a line of JavaScript
+- [Scaler](https://www.scaler.com/topics/javascript-disable-button/) - the solution to disabling a button was found on Scaler
+- [Free Code Camp](https://www.freecodecamp.org/news/javascript-date-comparison-how-to-compare-dates-in-js/#:~:text=To%20handle%20equality%20comparison%2C%20we,getMonth()%20and%20getYear()%20.) - the solution to creating a date out of year, month, day
+- [Cloudnweb](https://cloudnweb.dev/2020/08/3-efficient-ways-to-get-tomorrow-date-using-javascript/) - the process of getting tomorrow's date
+
