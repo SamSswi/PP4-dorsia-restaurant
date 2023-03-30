@@ -6,10 +6,13 @@ from datetime import datetime, timedelta, date
 
 class TestViews(TestCase):
     def setUp(self):
+        # The solution on how to create a test user was found on:
         # https://stackoverflow.com/questions/36940384/how-do-i-setup-a-unit-test-user-for-django-app-the-unit-test-cant-login
         self.user = User.objects.create_user(
             username='testuser', password='TestPassword12345')
 
+    # The home page test function was taken from
+    # the Code Institute Hello Django sample project
     # https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/dc049b343a9b474f8d75822c5fda1582/5666926980b74689b37a0d5da3cec510/
     def test_get_home_page(self):
         response = self.client.get('')
@@ -22,6 +25,7 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, 'menu.html')
 
     def test_get_reservation_page(self):
+        # The login line was taken from Stackoverflow:
         # https://stackoverflow.com/questions/36940384/how-do-i-setup-a-unit-test-user-for-django-app-the-unit-test-cant-login
         self.client.login(username='testuser', password='TestPassword12345')
         response = self.client.get('/reservation/')
@@ -94,7 +98,6 @@ class TestViews(TestCase):
         )
         response = self.client.post(f'/delete_reservation/{booking.id}/', {})
         self.assertRedirects(response, '/manage_reservations/')
-        # https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/dc049b343a9b474f8d75822c5fda1582/5666926980b74689b37a0d5da3cec510/
         existing_bookings = Booking.objects.filter(id=booking.id)
         self.assertEqual(len(existing_bookings), 0)
 

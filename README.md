@@ -172,11 +172,15 @@ I used the Coverage library to keep track of how much code was covered by the te
 # Credits
 
 ### settings.py file
-- [Code Institute Codestar Sample Project](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/11_messages/codestar/settings.py) for the MESSAGE_TAGS dictionary
-- [Stackoverflow](https://stackoverflow.com/questions/4650509/different-db-for-testing-in-django) for the condition of the if statement
+- [Code Institute Codestar Sample Project](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/11_messages/codestar/settings.py) - the MESSAGE_TAGS dictionary
+- [Stackoverflow](https://stackoverflow.com/questions/4650509/different-db-for-testing-in-django) - the condition of the if statement
 
 ### admin.py file 
-- [Code Institute Codestar Sample Project](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/05_building_the_admin_site/blog/admin.py) for the list_filter variable in the BookingAdmin class and the confirm_booking method.
+- [Code Institute Codestar Sample Project](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/05_building_the_admin_site/blog/admin.py) - the list_filter variable in the BookingAdmin class and the confirm_booking method.
 
 ### models.py
-- [Code Institute Codestar Sample Project](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/05_building_the_admin_site/blog/models.py) for the confirmed variable in the Booking model.
+- [Code Institute Codestar Sample Project](https://github.com/Code-Institute-Solutions/Django3blog/blob/master/05_building_the_admin_site/blog/models.py) - the confirmed variable in the Booking model.
+
+### test_views.py
+- [Stackoverflow](https://stackoverflow.com/questions/36940384/how-do-i-setup-a-unit-test-user-for-django-app-the-unit-test-cant-login) - the solution on how to create a test user
+- [Code Institute Hello Django Sample Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/dc049b343a9b474f8d75822c5fda1582/5666926980b74689b37a0d5da3cec510/) - the home page test function
