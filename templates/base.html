@@ -87,7 +87,7 @@
   <main>
     <!-- Page Content Goes Here -->
   </main>
-    {% endblock content %}
+  {% endblock content %}
 
   <!-- Footer -->
   <footer>
@@ -161,8 +161,9 @@
                     <td>Phone: +1 555-555-5555</td>
                   </tr>
                   <tr>
-                    <td>Social Media: <a href="https://www.twitter.com/" target=”_blank”><i class="fa-brands fa-twitter"></i></a>&#09;<a
-                        href="https://www.instagram.com/" target=”_blank”><i class="fa-brands fa-instagram"></i></a>&#09;<a
+                    <td>Social Media: <a href="https://www.twitter.com/" target=”_blank”><i
+                          class="fa-brands fa-twitter"></i></a>&#09;<a href="https://www.instagram.com/"
+                        target=”_blank”><i class="fa-brands fa-instagram"></i></a>&#09;<a
                         href="https://www.facebook.com/" target=”_blank”><i class="fa-brands fa-facebook"></i></a></td>
                   </tr>
                 </tbody>
@@ -180,6 +181,7 @@
   </footer>
   <!-- The alert messages script was copied from Code Institute Codestar Sample Project -->
   <!-- https://github.com/Code-Institute-Solutions/Django3blog/blob/master/11_messages/templates/base.html -->
+  {% block postload_js %}
   <script>
     setTimeout(function () {
       let messages = document.getElementById('msg');
@@ -187,6 +189,7 @@
       alert.close();
     }, 2500);
   </script>
+  {% endblock %}
 </body>
 
 </html>

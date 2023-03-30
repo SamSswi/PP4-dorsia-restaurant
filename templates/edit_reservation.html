@@ -110,5 +110,6 @@
 </div>
 {% endblock content %}
 {% block postload_js %}
+{{block.super}}
 <script src="{% static 'js/reservation.js' %}"></script>
 {% endblock %}
