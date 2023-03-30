@@ -6,12 +6,12 @@
 
 {% block content %}
 
-<h3 class="title">{% trans "Making an account" %}</h3>
+<h3 class="title">{% trans "Sign Up" %}</h3>
 <div class="container-fluid">
   <div class="row auth-row">
     <div class="col-md-8 col-sm-12 col-lg-6 m-md-2 m-sm-1 m-lg-3">
 
-      <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}" class="auth-redirect">log
+      <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}" class="auth-redirect">sign
           in</a>.{% endblocktrans %}
       </p>
 
@@ -21,7 +21,7 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button type="submit" class="btn btn-success">{% trans "Register" %}</button>
+        <button type="submit" class="btn btn-success">{% trans "Sign Up" %}</button>
         <button type="button" class="btn btn-secondary" onclick="history.go(-1)">{% trans 'Go Back' %}</button>
       </form>
     </div>
