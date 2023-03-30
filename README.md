@@ -26,8 +26,9 @@ The users are presented with:
 The website offers a responsive design and allows for intuitive navigation.
 
 ## User Stories
-All my User Stories for this project with their acceptance criteria and tasks can be found [here](https://github.com/users/SamSswi/projects/5)
+[You can click here to access the kanban board of the project](https://github.com/users/SamSswi/projects/5)
 
+All my User Stories for this project with their acceptance criteria and tasks can be found [here](https://github.com/SamSswi/PP4-dorsia-restaurant/issues). 
 1. As an Admin I can log in as a super user so that I can access the backend of the website
 
 2. As an Admin I can make changes to the menu items so that the users sees an up-to-date menu
